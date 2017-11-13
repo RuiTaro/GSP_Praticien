@@ -296,10 +296,6 @@ table.listeLegere th.libelle{
 }
 
 /*css de la page de connexion*/
-* {
-    padding:auto;
-    margin: auto;
-}
 .login {
     width:520px;
     left: 0;
