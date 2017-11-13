@@ -1,7 +1,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
-<div class="block_co">
+<div id="block_co">
 <div class="login">
         <div class="form">
             <!-- <img src="https://travelplanet.pro/assets/img/Travel_Planet_blanc.png" alt=""> -->
