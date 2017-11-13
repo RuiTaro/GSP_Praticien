@@ -296,6 +296,9 @@ table.listeLegere th.libelle{
 }
 
 /*css de la page de connexion*/
+.block_co{
+  margin-left: 10%;
+}
 .login {
     width:520px;
     left: 0;
