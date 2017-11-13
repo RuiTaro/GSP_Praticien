@@ -3,17 +3,17 @@
 		<div class="box">
 		<?php
 		
-		if(!empty($_REQUEST['nomalb']))
+		if(!empty($_REQUEST['nomspec']))
 		{ 
-			$LeAlbum=Album::findByName($_REQUEST['nomalb']); 
+			$laSpecialite=Specialite::findByName($_REQUEST['nomspec']); 
 		}
 		?>
-			<h2>Les Albums</h2>
+			<h2>Les Specialites</h2>
 			<section>
-				<form action='index.php?uc=Albums&action=result' method='POST'>
-				<input type='hidden' name="idAlbum" value='<?php if(!empty($_REQUEST['nomalb'])){echo $LeAlbum->getId();}?>'>
-				<label for "nomAlbum">Nom de l'album</label> <input type="text" name="nomAlbum" id="nomAlbum" 
-				value="<?php if(!empty($_REQUEST['nomalb'])){echo $LeArtiste->getNom();} ?>">
+				<form action='index.php?uc=Specialites&action=result' method='POST'>
+				<input type='hidden' name="idspec" value='<?php if(!empty($_REQUEST['nomspec'])){echo $laSpecialite->getId();}?>'>
+				<label for "nomSpecialite">Nom de la specialite</label> <input type="text" name="nomspec" id="nomspec" 
+				value="<?php if(!empty($_REQUEST['nomspec'])){echo $laSpecialite->getLibelle();} ?>">
 				<input type="submit" value="Lancer"/>
 				</form>
 

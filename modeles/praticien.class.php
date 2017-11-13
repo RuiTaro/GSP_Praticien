@@ -85,7 +85,7 @@ class Praticien
     }
     public static function supprimerPraticien($id)
     {
-        $sql="delete from praticien where id= :id " ;
+        $sql="delete from praticien where Pra_Num= :id " ;
         $resultat=MonPdo::getInstance()->prepare($sql);
         $resultat->bindParam(':id', $id);
         $resultat->execute();
@@ -93,7 +93,7 @@ class Praticien
     }
     public static function findById($id)
     {
-        $sql="select * from praticien where id= ?" ;
+        $sql="select * from praticien where Pra_Num= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
         $resultat->execute(array($id)); // applique le paramètre
         $lePraticien=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Praticien"); // lit la ligne et renvoie un objet Praticien
@@ -103,7 +103,7 @@ class Praticien
 
     public static function findByName($nom)
     { 
-        $sql="select * from praticien where nom= ?" ;
+        $sql="select * from praticien where Pra_Nom= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
         $resultat->execute(array($nom)); // applique le paramètre
         $NomPraticien=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Praticien"); // lit la ligne et renvoie un objet Praticien
@@ -114,9 +114,21 @@ class Praticien
     // modifie un objet Praticien
     public static function modifierPraticien($id,$nom)
     {
-        $sql="update praticien set nom= ? where id= ?" ;
+        $sql="update praticien set Pra_Nom= ? where id= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
         $resultat->execute(array($nom,$id)); // applique le paramètre
         throw new Exception("Problème dans la modification de praticien.") ;
+    }
+    /**s
+     * renvoie la liste des specialites d'un praticien
+     * @return array<Specialite> tableau d'instances de Specialite
+    */ 
+
+    public function getSpec()
+    {
+        $sql="select * from posseder where Spe_Code= ". $this->getId();
+        $resultat=MonPdo::getInstance()->query($sql);
+        $lesSpecialites=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'Specialite');
+        return $lesSpecialites;
     }
 }

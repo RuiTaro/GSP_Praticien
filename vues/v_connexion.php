@@ -1,5 +1,4 @@
-//help    
-    <div class="login">
+<div class="login">
         <div class="form">
             <!-- <img src="https://travelplanet.pro/assets/img/Travel_Planet_blanc.png" alt=""> -->
             <h1>Bienvenue</h1>
@@ -364,7 +363,7 @@
           <g>
             <rect x="130.02" y="471.09" width="18.89" height="30.78" rx="6.47" ry="6.47" style="fill: #3a3a3a"/>
             <rect x="242.19" y="471.09" width="18.89" height="30.78" rx="6.47" ry="6.47" style="fill: #3a3a3a"/>
-          </g>
+            </g>
           <rect x="147.64" y="395.29" width="95.73" height="140.96" rx="19.1" ry="19.1" style="fill: #512e41"/>
         </g>
         <g id="headCharacter">

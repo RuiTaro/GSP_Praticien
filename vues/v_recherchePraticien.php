@@ -3,17 +3,17 @@
 		<div class="box">
 		<?php
 		
-		if(!empty($_REQUEST['nomart']))
+		if(!empty($_REQUEST['nomprat']))
 		{ 
-			$LeArtiste=Artist::findByName($_REQUEST['nomart']); // trouve l'artiste et on renvoie un objet Artist
+			$LePraticien=Praticien::findByName($_REQUEST['nomprat']); // trouve le Praticien et on renvoie un objet Praticien
 		}
 		?>
-			<h2>Les Artistes</h2>
+			<h2>Les Praticiens</h2>
 			<section>
-				<form action='index.php?uc=Artistes&action=resultat' method='POST'>
-				<input type='hidden' name="idArtiste" value='<?php if(!empty($_REQUEST['nomart'])){echo $LeArtiste->getId();}?>'>
-				<label for "nomArtiste">Nom de l'artiste</label> <input type="text" name="nomArtiste" id="nomArtiste" 
-				value="<?php if(!empty($_REQUEST['nomart'])){echo $LeArtiste->getNom();} ?>">
+				<form action='index.php?uc=Praticien&action=resultat' method='POST'>
+				<input type='hidden' name="idPraticien" value='<?php if(!empty($_REQUEST['nomprat'])){echo $LePraticien->getId();}?>'>
+				<label for "nomPraticien">Nom du Praticien</label> <input type="text" name="nomPraticien" id="nomPraticien" 
+				value="<?php if(!empty($_REQUEST['nomprat'])){echo $LePraticien->getNom();} ?>">
 				<input type="submit" value="Lancer"/>
 				</form>
 

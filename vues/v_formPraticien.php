@@ -1,19 +1,19 @@
 <div id="page">
-	<div id="content">
+	<div id="contenu">
 		<div class="box">
 		<?php
-		// si la variable $_REQUEST['numart'] est vide c'est qu'il s'agit d'un nouvel artiste à créer
-		if(!empty($_REQUEST['numart'])){ // si on demande une modification d'un artiste
-			$LeArtiste=Artist::findById($_REQUEST['numart']); // trouve l'artiste et on renvoie un objet Artist
+		// si la variable $_REQUEST['numprat'] est vide c'est qu'il s'agit d'un nouvel Praticien à créer
+		if(!empty($_REQUEST['numprat'])){ // si on demande une modification d'un Praticien
+			$LePraticien=Praticien::findById($_REQUEST['numprat']); // trouve le Praticien et on renvoie un objet Praticien
 		}
 		?>
-			<h2>Fiche Artiste</h2>
+			<h2>Fiche Praticien</h2>
 			<section>
-				<form action='index.php?uc=Artistes&action=VerifForm' method='post'>
-				<input type='hidden' name="idArtiste" value='<?php if(!empty($_REQUEST['numart'])){echo $LeArtiste->getId();}?>'>
-				<label for "nomArtiste">Nom de l'artiste</label> <input type="text" name="nomArtiste" id="nomArtiste" 
-				value="<?php if(!empty($_REQUEST['numart'])){echo $LeArtiste->getNom();} ?>">
-				<input type="submit" value="<?php if(!empty($_REQUEST['numart'])){echo "Modifier l'artiste";}else{echo "Ajouter l'artiste";} ?>" />
+				<form action='index.php?uc=Praticien&action=VerifForm' method='post'>
+				<input type='hidden' name="idPraticien" value='<?php if(!empty($_REQUEST['numprat'])){echo $LePraticien->getId();}?>'>
+				<label for "nomPraticien">Nom du praticien </label> <input type="text" name="nomPraticien" id="nomPraticien" 
+				value="<?php if(!empty($_REQUEST['numprat'])){echo $LePraticien->getNom();} ?>">
+				<input type="submit" value="<?php if(!empty($_REQUEST['numprat'])){echo "Modifier le praticien";}else{echo "Ajouter le praticien";} ?>" />
 				</form>
 			</section>
 		</div>

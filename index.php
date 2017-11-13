@@ -9,7 +9,7 @@ require_once("modeles/utilisateur.class.php");
 
 
 include("vues/v_entete.php") ;//bandeau en-tête
-include("vues/v_menu.php") ;//menu
+include("vues/menuCR.html") ;//menu
 
 if(!isset($_REQUEST['uc']))  // si le contrôleur n'est pas défini (donc première venue sur le site
      $uc = 'accueil';        //on lui affecte accueil
@@ -38,7 +38,7 @@ switch($uc) //suivant le contrôleur dans uc
 		 include("controleurs/c_Connexion.php");
 		 break;	
 }
-include("vues/v_pied.php") ;// pied de site
+
 ?>
 
 
