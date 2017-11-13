@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">i
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <div class="login">
         <div class="form">
