@@ -3,9 +3,9 @@
 <head>
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>Discographie</title>
+<title>Praticiens</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="styles/style.css" />
+<link rel="stylesheet" type="text/css" href="styles/styles.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.dropotron-1.0.js"></script>
 <script type="text/javascript" src="js/jquery.slidertron-1.1.js"></script>
@@ -39,7 +39,7 @@
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
-			<h1><a href="index.php">Bibliothèque Discographique</a></h1>
+			<h1><a href="index.php"></a></h1>
 		</div>
 		<div id="slogan">
 		<?php If (!empty( $_SESSION['connexion'])) // si quelqu'un est connecté

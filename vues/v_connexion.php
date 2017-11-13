@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">i
+</head>
 <div class="login">
         <div class="form">
             <!-- <img src="https://travelplanet.pro/assets/img/Travel_Planet_blanc.png" alt=""> -->
@@ -491,3 +494,11 @@
     </g>
   </g>
 </svg>
+<script type="text/javascript"> 
+  function checkInput(input) {
+    if (input.value.length > 0) {
+        input.className = 'active';
+    } else {
+        input.className = '';
+    }
+}</script>
