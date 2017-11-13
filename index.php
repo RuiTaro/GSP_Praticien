@@ -19,7 +19,7 @@ else
 switch($uc) //suivant le contrôleur dans uc
 {
 	case 'accueil':
-		include("vues/v_accueil.php");  //page d'accueil
+		include("vues/v_connexion.php");  //page d'accueil
 		break;
 		
 	case 'Praticiens' :                               //on va au contrôleur secondaire c_Praticiens
