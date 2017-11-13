@@ -3,7 +3,7 @@
             <!-- <img src="https://travelplanet.pro/assets/img/Travel_Planet_blanc.png" alt=""> -->
             <h1>Bienvenue</h1>
             <div class="box">
-    <h1>Sign up</h1>
+    <h1>Sign in</h1>
     <form action="index.php?uc=administrer&action=verifConnexion" method='post'>       
         <div class="input-group">
             <input type="login" id="login" placeholder="saisir votre login" onblur="checkInput(this)" />
