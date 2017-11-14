@@ -11,9 +11,9 @@ include("vues/v_entete.php");
 			<div class="container">
 
 	<ul class="tabs">
-		<li class="tab-link current" data-tab="tab-1">Praticien</li>
-		<li class="tab-link" data-tab="tab-2">Type praticien</li>
-		<li class="tab-link" data-tab="tab-3">Spécialité</li>
+		<li class="tab-link current" data-tab="tab-1">Praticiens</li>
+        <li class="tab-link" data-tab="tab-2">Spécialité</li>
+		<li class="tab-link" data-tab="tab-3">Type praticien</li>
 		<li class="tab-link" data-tab="tab-4">Info</li>
 	</ul>
 
