@@ -1,7 +1,7 @@
 <div id="page">
 	<div id="content">
 		<div class="box">
-			<h2>Liste des artistes</h2>
+			<h2>Liste des praticiens</h2>
 			<section>
 			<?php		
 			If (!empty( $_SESSION['connexion'])) // si quelqu'un est connecté
