@@ -212,11 +212,6 @@
 	</div>
 
 </div><!-- container -->
-			</section>
-		</div>
-	</div>
-	<br class="clearfix" />
-</div>
 
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -233,4 +228,11 @@
 
 })
 </script>
+			</section>
+		</div>
+	</div>
+	<br class="clearfix" />
+</div>
+
+
 

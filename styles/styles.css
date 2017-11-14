@@ -692,9 +692,6 @@ input[type="submit"] {
     }
 }
 
-#block_co{
-  left: 10%;
-}
 /*fin de page de connexion*/
 
 /*tableau affichage*/
@@ -808,19 +805,5 @@ body{
   }
 }
 
-body {
-  padding: 0 2em;
-  font-family: Arial, sans-serif;
-  color: #024457;
-  background: #f2f2f2;
-}
 
-h1 {
-  font-family: Verdana;
-  font-weight: normal;
-  color: #024457;
-}
-h1 span {
-  color: #167f92;
-}
 /*fin tableau*/
