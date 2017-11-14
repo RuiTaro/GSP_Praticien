@@ -29,13 +29,6 @@ body{
 	padding: 0.2em;
 	border-collapse: separate;
 }
-#menuGauche {
-	margin-top : 0.8em;
-	padding: 1em;	
-	color: rgb(0,85,227);
-	float: left;
-	width: 14%;
-}
 
 #contenu{
 	border: none;
@@ -54,34 +47,6 @@ body{
 /* pour rétablir le mauvais effet sur les nav. modernes */
 html>body #contenu{
   height:auto;
-}
-
-/* style à appliquer à la balise ul d'identifiant menulist */
-ul#menuList{
-    list-style:none;
-    margin:0px;
-    padding:0px;
-    width:98%;
-    font-size: 1em;
-}
-
-/* style à appliquer aux éléments de la balise ul d'identifiant menulist */
-ul#menuList li {
-    position:relative;
-    margin:0px;
-    padding:0px;
-}
-
-/* apparences des liens dans listes et sous-listes non numérotées */
-ul#menuList a {
-    color:rgb(0,85,227);
-    display:block;
-    text-decoration:none;
-    width:100%;
-}
-ul#menuList a:hover {
-    background: rgb(0,85,227);
-    color: white;
 }
 
 #entete #logoGSB {
@@ -292,6 +257,65 @@ table.listeLegere th.libelle{
   height : 28px;
   float : left;
 
+}
+
+#menu {
+  padding: 0 45px 0 45px;
+  position: relative;
+  background: #209D9D url(images/img02.gif) repeat-x top left;
+  margin: 0;
+  height: 60px;
+  width: 890px;
+  border-top: solid 1px #5AD7D7;
+  border-bottom: solid 1px #1C7575;
+  text-shadow: 0 1px 1px #007D7D;
+}
+
+#menu ul {
+  list-style: none;
+  padding-top: 12px;
+  position: relative;
+  left: -15px;
+}
+
+#menu ul li {
+  padding: 5px 15px 5px 15px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#menu ul li a, #menu ul li span {
+  text-decoration: none;
+  color: #FFFFFF;
+  letter-spacing: -1px;
+  font-size: 1.25em;
+}
+
+#menu ul li span b {
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #1C7575;
+  margin-left: 8px;
+  position: relative;
+  top: -1px;
+}
+
+#menu ul li.active {
+  background: #1C7575;
+  border-top: solid 1px #1A6B6B;
+  border-bottom: solid 1px #5AD7D7;
+  border-radius: 3px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#menu ul li.active span b {
+  border-top-color: #165E5E;
+}
+
+br.clearfix {
+  clear: both;
 }
 
 /*css de la page de connexion*/
