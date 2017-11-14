@@ -263,26 +263,6 @@ table.listeLegere th.libelle{
 br.clearfix {
   clear: both;
 }
-ul {
-  margin-bottom: 1.5em;
-}
-
-#content {
-  /*width: 665px;*/
-  float: left;
-  padding: 0;
-}
-
-#content-box1 {
-  width: 445px;
-  float: left;
-}
-
-#content-box2 {
-  margin: 0 0 0 460px;
-  width: 445px;
-}
-
 #menu {
   padding: 0 45px 0 45px;
   position: relative;  
@@ -290,8 +270,7 @@ ul {
   height: 60px;
   width: 890px;
   border-top: solid 1px ;
-  border-bottom: solid 1px;
-  text-shadow: 0 1px 1px;
+  border-bottom: solid 1px;  
   background-color: #013967;
 }
 
@@ -306,6 +285,11 @@ ul {
   padding: 5px 15px 5px 15px;
   margin-right: 10px;
   display: inline-block;
+}
+
+#menu ul li a, #menu ul li span {
+  text-decoration: none;
+  color: #FFFFFF;   
 }
 
 #menu ul li span b {
