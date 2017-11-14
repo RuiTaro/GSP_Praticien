@@ -1,243 +1,51 @@
-<?php
-include("vues/v_entete.php");
-?>
-
 <div id="page">
-	<div id="content">
-        
-		<div class="box">
-			<h2>Liste des praticiens</h2>
-			<section>
-			<div class="container">
+    <div id="content">
+        <div class="box">
+            <h2>Liste des praticiens</h2>
+            <section>
+            <?php       
+            If (!empty( $_SESSION['connexion'])) // si quelqu'un est connecté
+            { ?>
+                <a class="btn" href='index.php?uc=Praticiens&action=ajouter'>Ajouter un praticien</a>
+            <?php } ?>
+            <table><tr><th>Numéro</th><th>Nom</th><th>Actions</th></tr>
+            <script>
+            function supprPraticien(id) 
+            {
+                if(confirm("Voulez vous vraimer supprimer ce praticien. Attention la suppression du praticien entrainera la suppression de tous ses albums ?"))
+                {
+                    location.href='index.php?uc=Praticiens&action=supprimer&numprat='+id;
+                }
+                else {
+                    alert("Le praticien n'a pas été supprimé.");
+                }
+            }
+            </script>
+            <?php
+            foreach($lesPraticiens as $praticien) //parcours du tableau d'objets récupérés
+            {   
+                $idPrat=$praticien->getId();           
+                $nom=$praticien ->getNom();?>
+            <tr>
+            <td width=5%><?php echo $idArt?></td><td width=80%><?php echo $nom?></a></td><!--affichage dans des liens-->
+            <td class='action' width=15%>
+                <a href='index.php?uc=Praticiens&action=praticien&numprat=<?php echo $idprat ?>' class="imageRechercher" title='Voir la liste des spécialités'></a> 
+                <?php       
+                If (!empty( $_SESSION['connexion']))  
+                { ?>    
+                    <a href='index.php?uc=Praticiens&action=modifier&numprat=<?php echo $idprat; ?>' class="imageModifier" title="modifier un praticien"></a>
+                    <span class="imageSupprimer" onclick="javascript:supprArtiste('<?php echo $idprat; ?>')" title="supprimer un praticien" ></span> <!-- on met un span pour pouvoir invoquer le on click -->
+                <?php } ?>
+            </td>
+            </tr>
 
-	<ul class="tabs">
-		<li class="tab-link current" data-tab="tab-1">Praticien</li>
-		<li class="tab-link" data-tab="tab-2">Type praticien</li>
-		<li class="tab-link" data-tab="tab-3">Spécialité</li>
-		<li class="tab-link" data-tab="tab-4">Info</li>
-	</ul>
-
-	<div id="tab-1" class="tab-content current">
-	<table class="responstable">
-  
-  <tr>
-   <th>Sélection</th>
-    <th data-th="Driver details"><span>Nom</span></th>
-    <th>Adresse</th>
-    <th>Code postale</th>
-    <th>Ville</th>
-    <th>Coefficient</th>
-    <th>Type</th>
-    <th>Scpécialité</th>
-    <th>Options</th>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steve</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Policyholder</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steffie</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Spouse</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stan</td>
-    <td>Foo</td>
-    <td>01/01/1994</td>
-    <td>Son</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stella</td>
-    <td>Foo</td>
-    <td>01/01/1992</td>
-    <td>Daughter</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-</table>
-	</div>
-	<div id="tab-2" class="tab-content">
-		<table class="responstable">
-  
-  <tr>
-    <th>Sélection</th>
-    <th data-th="Driver details"><span>Nom</span></th>
-    <th>Adresse</th>
-    <th>Code postale</th>
-    <th>Ville</th>
-    <th>Coefficient</th>
-    <th>Type</th>
-    <th>Scpécialité</th>
-    <th>Options</th>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steve</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Policyholder</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steffie</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Spouse</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stan</td>
-    <td>Foo</td>
-    <td>01/01/1994</td>
-    <td>Son</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stella</td>
-    <td>Foo</td>
-    <td>01/01/1992</td>
-    <td>Daughter</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-</table>
-	</div>
-	<div id="tab-3" class="tab-content">
-	<table class="responstable">
-  
-  <tr>
-    <th>Sélection</th>
-    <th data-th="Driver details"><span>Nom</span></th>
-    <th>Adresse</th>
-    <th>Code postale</th>
-    <th>Ville</th>
-    <th>Coefficient</th>
-    <th>Type</th>
-    <th>Scpécialité</th>
-    <th>Options</th>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steve</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Policyholder</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Steffie</td>
-    <td>Foo</td>
-    <td>01/01/1978</td>
-    <td>Spouse</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stan</td>
-    <td>Foo</td>
-    <td>01/01/1994</td>
-    <td>Son</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td><input type="radio"/></td>
-    <td>Stella</td>
-    <td>Foo</td>
-    <td>01/01/1992</td>
-    <td>Daughter</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  
-</table>
-	</div>
-	<div id="tab-4" class="tab-content">
-		Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	</div>
-
-</div><!-- container -->
-
-<script type="text/javascript">
-	$(document).ready(function(){
-	
-	$('ul.tabs li').click(function(){
-		var tab_id = $(this).attr('data-tab');
-
-		$('ul.tabs li').removeClass('current');
-		$('.tab-content').removeClass('current');
-
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-	})
-
-})
-</script>
-			</section>
-		</div>
-	</div>
-	<br class="clearfix" />
+            <?php
+                }
+            ?>
+            </table>
+            </section>
+        </div>
+    </div>
+    <br class="clearfix" />
 </div>
-
-
 
