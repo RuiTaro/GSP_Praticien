@@ -1,6 +1,6 @@
 <div id="page">
 	<div id="content">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        
 		<div class="box">
 			<h2>Liste des praticiens</h2>
 			<section>
