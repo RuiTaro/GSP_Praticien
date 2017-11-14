@@ -273,6 +273,45 @@ br.clearfix {
   background-color: #013967;
 }
 
+#menu ul {
+  list-style: none;
+  padding-top: 12px;
+  position: relative;
+  left: -15px;
+}
+
+#menu ul li {
+  padding: 5px 15px 5px 15px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#menu ul li a, #menu ul li span {
+  text-decoration: none;
+  color: #FFFFFF;   
+}
+
+#menu ul li span b {
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #1C7575;
+  margin-left: 8px;
+  position: relative;
+  top: -1px;
+}
+
+#menu ul li.active {  
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  border-radius: 3px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#menu ul li.active span b {
+  border-top-color: #165E5E;
+}
 #wrapper {
   position: relative;
   width: 100%;
