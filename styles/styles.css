@@ -324,8 +324,8 @@ br.clearfix {
 
 /*css de la page de connexion*/
 .login {
-    width:520px;
-    left: 0;
+    width:540px;
+    left: 2%;
     height: 100vh;
     background-color: #344A85;
     position: absolute;
@@ -350,7 +350,7 @@ img {
 
 svg {
     height: 100vh;
-    left: 30vw;
+    left: 37%;
     position: absolute
 }
 
