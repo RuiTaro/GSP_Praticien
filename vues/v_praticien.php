@@ -29,7 +29,7 @@
             <tr>
             <td width=5%><?php echo $idPrat?></td><td width=80%><?php echo $nom?></a></td><!--affichage dans des liens-->
             <td class='action' width=15%>
-                <a href='index.php?uc=Praticiens&action=praticien&numprat=<?php echo $idPrat ?>' class="imageRechercher" title='Voir la liste des spécialités'></a> 
+                <a href='index.php?uc=Praticiens&action=praticien&numprat=<?php echo $idPrat; ?>' class="imageRechercher" title='Voir la liste des spécialités'></a> 
                 <?php       
                 If (!empty( $_SESSION['connexion']))  
                 { ?>    
