@@ -19,7 +19,7 @@
             <label for="mdp">Password</label>
         </div>
 
-        <input type="submit" value="Se connecter" />
+        <input type="submit" value="Se connecter">
     </form>
 </div>
         </div>
