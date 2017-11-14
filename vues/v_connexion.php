@@ -16,7 +16,7 @@
 
 	<div class="input-group">
             <input type="Password" id="mdp" onblur="checkInput(this)" />
-            <label for="Password">Password</label>
+            <label for="mdp">Password</label>
         </div>
 
         <input type="submit" value="Se connecter" />
