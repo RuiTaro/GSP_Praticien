@@ -10,6 +10,6 @@ class Utilisateur
         $resultat->bindParam(':mdp', $mdp);
         $resultat->execute();
         $login=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,'Utilisateur');   
-        return $login;
+        return $login[0];
     }	
 }
