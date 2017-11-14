@@ -1,7 +1,7 @@
 <body bgcolor="white" text="5599EE">
 
 <div name="haut" style="margin: 2 2 2 2 ;height:6%;"><h1><img src="images/logo.jpg" width="100" height="60"/></div>
-<div name="gauche" style="float:left;width:auto; background-color:transparent; height:100%;">
+<div name="gauche" style="float:left;width:100%; background-color:transparent; height:100%;">
 
 	<div id="menu">
 		<ul>
