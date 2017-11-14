@@ -10,7 +10,7 @@ switch($action)
 		if (!empty($login)) 
         {
              $_SESSION['connexion']=$login;
-             header("refresh: 0;url=vues/menuCR.php");
+             header("refresh: 0;url=index.php");
 
         }
 		

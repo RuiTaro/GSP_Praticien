@@ -116,6 +116,10 @@ ul#menuList a:hover {
   vertical-align:middle;
 }
 
+h5{
+  color: #024457;
+}
+
 /* Style des formulaires */
 .corpsForm {
   border : solid 0.1em #000;
