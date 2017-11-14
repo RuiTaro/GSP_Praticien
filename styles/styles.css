@@ -289,9 +289,10 @@ ul {
   margin: 0;
   height: 60px;
   width: 890px;
-  border-top: solid 1px #5AD7D7;
-  border-bottom: solid 1px #1C7575;
-  text-shadow: 0 1px 1px #007D7D;
+  border-top: solid 1px ;
+  border-bottom: solid 1px;
+  text-shadow: 0 1px 1px;
+  background-color: #013967;
 }
 
 #menu ul {
@@ -309,8 +310,7 @@ ul {
 
 #menu ul li a, #menu ul li span {
   text-decoration: none;
-  color: #FFFFFF;
-  letter-spacing: -1px;
+  color: #FFFFFF;  
   font-size: 1.25em;
 }
 
@@ -324,10 +324,9 @@ ul {
   top: -1px;
 }
 
-#menu ul li.active {
-  background: #1C7575;
-  border-top: solid 1px #1A6B6B;
-  border-bottom: solid 1px #5AD7D7;
+#menu ul li.active {  
+  border-top: solid 1px;
+  border-bottom: solid 1px;
   border-radius: 3px;
   padding-top: 4px;
   padding-bottom: 4px;
