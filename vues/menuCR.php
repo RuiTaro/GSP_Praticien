@@ -11,7 +11,7 @@
 		</ul>
 		<li>Consulter</li>
 		<ul><li><a href="formMEDICAMENT.html" >Médicaments</a></li>
-			<li><a href="index.php?uc=administrer&action=connexion" >Praticiens</a></li>
+			<li><a href="index.php?uc=Praticiens&action=all" >Praticiens</a></li>
 			<li><a href="formVISITEUR.html" >Autres visiteurs</a></li>
 		</ul>
 	</ul>
