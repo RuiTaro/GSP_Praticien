@@ -3,25 +3,18 @@
 	<div id="menu">
 		<ul>
 			<li class="first">
-				<span class="opener">Les artistes<b></b></span>
+				<span class="opener">Les praticiens<b></b></span>
 					<ul>
-						<li><a href="index.php?uc=Artistes&action=all">Liste des artistes</a></li>
-						<li><a href="index.php?uc=Artistes&action=rechercheArt">Rechercher un artiste</a></li>
+						<li><a href="index.php?uc=Praticiens&action=all">Liste des Praticiens</a></li>
+						<li><a href="index.php?uc=Praticiens&action=recherchePrat">Rechercher un Praticiens</a></li>
 					</ul>
 			</li>
 			<li class="first">
-				<span class="opener">Les genres<b></b></span>
+				<span class="opener">Les spécialités<b></b></span>
 					<ul>
-						<li><a href="index.php?uc=Genres&action=all">Liste des genres</a></li>
+						<li><a href="index.php?uc=Specialites&action=all">Liste des Spécialités</a></li>
 					</ul>
-			</li>
-			<li class="first">
-				<span class="opener">Les albums<b></b></span>
-					<ul>
-						<li><a href="index.php?uc=Albums&action=all">Liste des albums</a></li>
-						<li><a href="index.php?uc=Albums&action=rechercheAlb">Rechercher un album</a></li>
-					</ul>
-			</li>
+			</li>	
 		</ul>
 		<br class="clearfix" />
 	</div>
