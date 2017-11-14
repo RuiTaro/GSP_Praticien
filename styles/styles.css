@@ -308,12 +308,6 @@ ul {
   display: inline-block;
 }
 
-#menu ul li a, #menu ul li span {
-  text-decoration: none;
-  color: #FFFFFF;  
-  font-size: 1.25em;
-}
-
 #menu ul li span b {
   display: inline-block;
   border-left: 6px solid transparent;
