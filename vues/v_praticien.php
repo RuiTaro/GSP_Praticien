@@ -27,14 +27,14 @@
                 $idPrat=$praticien->getId();           
                 $nom=$praticien ->getNom();?>
             <tr>
-            <td width=5%><?php echo $idArt?></td><td width=80%><?php echo $nom?></a></td><!--affichage dans des liens-->
+            <td width=5%><?php echo $idPrat?></td><td width=80%><?php echo $nom?></a></td><!--affichage dans des liens-->
             <td class='action' width=15%>
-                <a href='index.php?uc=Praticiens&action=praticien&numprat=<?php echo $idprat ?>' class="imageRechercher" title='Voir la liste des spécialités'></a> 
+                <a href='index.php?uc=Praticiens&action=praticien&numprat=<?php echo $idPrat ?>' class="imageRechercher" title='Voir la liste des spécialités'></a> 
                 <?php       
                 If (!empty( $_SESSION['connexion']))  
                 { ?>    
-                    <a href='index.php?uc=Praticiens&action=modifier&numprat=<?php echo $idprat; ?>' class="imageModifier" title="modifier un praticien"></a>
-                    <span class="imageSupprimer" onclick="javascript:supprArtiste('<?php echo $idprat; ?>')" title="supprimer un praticien" ></span> <!-- on met un span pour pouvoir invoquer le on click -->
+                    <a href='index.php?uc=Praticiens&action=modifier&numprat=<?php echo $idPrat; ?>' class="imageModifier" title="modifier un praticien"></a>
+                    <span class="imageSupprimer" onclick="javascript:supprArtiste('<?php echo $idPrat; ?>')" title="supprimer un praticien" ></span> <!-- on met un span pour pouvoir invoquer le on click -->
                 <?php } ?>
             </td>
             </tr>
