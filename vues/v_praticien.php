@@ -8,7 +8,7 @@
             { ?>
                 <a class="btn" href='index.php?uc=Praticiens&action=ajouter'>Ajouter un praticien</a>
             <?php } ?>
-            <table><tr><th>Numéro</th><th>Nom</th><th>Actions</th></tr>
+            <table><tr><th>Numéro</th><th>Nom</th><th>Adresse</th><th>CP</th><th>Ville</th><th>Coefficient de notoriété</th></tr>
             <script>
             function supprPraticien(id) 
             {
