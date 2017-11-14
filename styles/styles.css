@@ -266,7 +266,7 @@ br.clearfix {
 #menu {
   padding: 0 45px 0 45px;
   position: relative;  
-  margin: 0;
+  margin-bottom: 150px;
   height: 60px;
   width: 890px;
   border-top: solid 1px ;
