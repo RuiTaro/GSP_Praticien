@@ -313,19 +313,6 @@ br.clearfix {
 #menu ul li.active span b {
   border-top-color: #165E5E;
 }
-
-#page-bottom-sidebar {
-  width: 200px;
-  margin: 0 0 0 690px;
-}
-
-
-#sidebar {
-  width: 200px;
-  padding: 0;
-  margin: 0 0 0 690px;
-}
-
 #wrapper {
   position: relative;
   width: 980px;
