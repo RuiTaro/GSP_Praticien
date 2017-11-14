@@ -20,7 +20,7 @@ switch($action)
 		break;
 
     case 'connexion':
-    	include("vues/v_connexion.php");
+    	include("vues/v_acceuil.php");
     	break;
 
     case 'deconnexion':
