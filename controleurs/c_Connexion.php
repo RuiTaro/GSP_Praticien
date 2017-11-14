@@ -6,10 +6,11 @@ switch($action)
 { 
 	case 'verifConnexion': 
 		$login=Utilisateur::VerifUser($_POST['login'], $_POST['mdp']);
+        
 		if (!empty($login)) 
         {
              $_SESSION['connexion']=$login;
-             header("refresh: 0;url=vues/v_praticien.php");
+             header("refresh: 0;url=vues/menuCR.php");
 
         }
 		

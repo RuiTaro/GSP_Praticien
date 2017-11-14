@@ -34,7 +34,7 @@ switch($uc) //suivant le contrôleur dans uc
 		 include("controleurs/c_Type_Praticien.php");
 		 break;
 
-	case 'administrer':								//on va au contrôleur secondaire c_voirConnexion
+	case 'administrer':								//on va au contrôleur secondaire c_Connexion
 		 include("controleurs/c_Connexion.php");
 		 break;	
 }
