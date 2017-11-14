@@ -5,29 +5,16 @@
 	<div id="menu">
 		<ul>
 			<li class="first">
-			<span class="opener">Comptes-rendus<b></b></span>
-					<ul>
-						<li><a href="">Voir les comptes-rendus</a></li>
-						<li><a href="">Nouveau</a></li>
-					</ul>
+			<span class="opener">Comptes-rendus<b></b></span>					
 			</li>
 			<li class="first">
-				<span class="opener">Médicaments<b></b></span>
-					<ul>
-						<li><a href="">Liste des medicaments</a></li>
-					</ul>
+				<span class="opener">Médicaments<b></b></span>					
 			</li>
 			<li class="first">
-				<span class="opener">Praticiens<b></b></span>
-					<ul>
-						<li><a href="index.php?uc=Praticiens&action=all" >Praticiens</a></li>
-					</ul>
+				<span class="opener"><a href="index.php?uc=Praticiens&action=all" >Praticiens</a><b></b></span>					
 			</li>
 			<li class="first">
 				<span class="opener">Visiteurs<b></b></span>
-					<ul>
-						<li><a href="">Liste des visiteurs</a></li>
-					</ul>
 			</li>
 		</ul>
 		<br class="clearfix" />
