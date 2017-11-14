@@ -9,12 +9,7 @@ switch($action)
 			include("vues/v_praticien.php");//puis on affiche la vue qui utilise les données
 			break;
 		} 
-    
-					
-	
 
-	
-	
 	default:echo "rien";
 	}
 	?>
