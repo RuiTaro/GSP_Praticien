@@ -5,16 +5,16 @@
 	<div id="menu">
 		<ul>
 			<li class="first">
-			<span class="opener">Comptes-rendus<b></b></span>					
+			<span class="opener">Comptes-rendus</span>					
 			</li>
 			<li class="first">
-				<span class="opener">Médicaments<b></b></span>					
+				<span class="opener">Médicaments</span>					
 			</li>
 			<li class="first">
-				<span class="opener"><a href="index.php?uc=Praticiens&action=all" >Praticiens</a><b></b></span>					
+				<span class="opener"><a href="index.php?uc=Praticiens&action=all" >Praticiens</a></span>					
 			</li>
 			<li class="first">
-				<span class="opener">Visiteurs<b></b></span>
+				<span class="opener">Visiteurs</span>
 			</li>
 		</ul>
 		<br class="clearfix" />
