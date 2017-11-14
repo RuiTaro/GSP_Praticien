@@ -9,7 +9,7 @@ switch($action)
 		if (!empty($login)) 
         {
              $_SESSION['connexion']=$login;
-             header("refresh: 0;url=index.php");
+             header("refresh: 0;url=vues/v_praticien.php");
 
         }
 		

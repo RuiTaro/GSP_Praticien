@@ -8,7 +8,7 @@ require_once("modeles/typePraticien.class.php");
 require_once("modeles/utilisateur.class.php");
 
 
-include("vues/v_entete.php") ;//bandeau en-tête
+include("vues/v_entete.php");//bandeau en-tête
 include("vues/menuCR.php") ;//menu
 
 if(!isset($_REQUEST['uc']))  // si le contrôleur n'est pas défini (donc première venue sur le site

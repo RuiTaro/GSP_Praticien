@@ -1,3 +1,7 @@
+<?php
+include("vues/v_entete.php");
+?>
+
 <div id="page">
 	<div id="content">
         
