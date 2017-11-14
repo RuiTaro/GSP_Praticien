@@ -10,7 +10,7 @@
     <h1>Sign in</h1>
     <form action="index.php?uc=administrer&action=verifConnexion" method='post'>       
         <div class="input-group">
-            <input type="login" id="login" placeholder="saisir votre login" onblur="checkInput(this)" />
+            <input type="login" id="login"onblur="checkInput(this)" />
             <label for="login">Login</label>
         </div>
 
