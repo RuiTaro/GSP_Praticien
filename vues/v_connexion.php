@@ -15,7 +15,7 @@
         </div>
 
 	<div class="input-group">
-            <input type="mdp" id="mdp" onblur="checkInput(this)" />
+            <input type="Password" id="mdp" onblur="checkInput(this)" />
             <label for="mdp">Password</label>
         </div>
 
