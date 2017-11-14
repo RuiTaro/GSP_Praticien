@@ -1,6 +1,5 @@
 /* Styles des divisions principales de la page */
-body{
-  background-color: #77AADD;
+body{  
 	background-image: url(imgs/FONDGLOBAL.jpg);
 	background-repeat: repeat-x;
   margin:0% 0%;
@@ -8,15 +7,13 @@ body{
   font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
   font-size:0.8em;
 }
-#page {
-  background-color:white;
+#page {  
   width : 65%;
   margin : auto ;
   border : 0.2em solid black;
   padding : 0.1em;
 }
-#entete{
-  background-color:rgb(72,198,236);
+#entete{  
 	color : #980101;
 	border: solid 0.1em #980101;
 	height: 154px;
@@ -34,8 +31,7 @@ body{
 }
 #menuGauche {
 	margin-top : 0.8em;
-	padding: 1em;
-	background-color: black;
+	padding: 1em;	
 	color: rgb(0,85,227);
 	float: left;
 	width: 14%;
@@ -43,8 +39,7 @@ body{
 
 #contenu{
 	border: none;
-	padding: 1.3em;
-	background-color: white;
+	padding: 1.3em;	
 	border-left :  groove 0.8em #980101;
   margin-top : 1.2em;
 	margin-left: 18%;
@@ -317,7 +312,7 @@ h1 {
     margin-bottom: 35px;
 }
 img {
-    width: 20vw;
+    width: 5vw;
     margin-bottom:40px;
 }
 
