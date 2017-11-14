@@ -4,15 +4,15 @@
 <div name="haut" style="margin: 2 2 2 2 ;height:6%;"><h1><img src="images/logo.jpg" width="100" height="60"/></div>
 <div name="gauche" style="float:left;width:18%; background-color:white; height:100%;">
 	<h2>Outils</h2>
-	<ul><li>Comptes-Rendus</li>
+	<ul>
+		<li><a href="">Comptes-Rendus</a></li>
+	</ul>
+			
 		<ul>
-			<li><a href="formRAPPORT_VISITE.htm" >Nouveaux</a></li>
-			<li>Consulter</li>
-		</ul>
-		<li>Consulter</li>
-		<ul><li><a href="formMEDICAMENT.htm" >Médicaments</a></li>
+			<li><a href="" >Nouveaux</a></li>
+			<li><a href="" >Médicaments</a></li>
 			<li><a href="index.php?uc=Praticiens&action=all" >Praticiens</a></li>
-			<li><a href="formVISITEUR.htm" >Autres visiteurs</a></li>
+			<li><a href="" >Autres visiteurs</a></li>
 		</ul>
 	</ul>
 </div>
