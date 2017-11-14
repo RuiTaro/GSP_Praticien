@@ -22,7 +22,8 @@ include("vues/v_entete.php");
   
   <tr>
    <th>Sélection</th>
-    <th data-th="Driver details"><span>Nom</span></th>
+    <th data-th="Driver details"><span>Num</span></th>
+    <th>Nom</th>
     <th>Adresse</th>
     <th>Code postale</th>
     <th>Ville</th>
@@ -31,7 +32,24 @@ include("vues/v_entete.php");
     <th>Scpécialité</th>
     <th>Options</th>
   </tr>
-  
+<?php
+  foreach($lesPraticiens as $praticien) //parcours du tableau d'objets récupérés
+            {   
+                $idPrat=$praticien->getId();           
+                $nom=$praticien ->getNom();
+                $adresse=$praticien->getAdresse();           
+                $CP=$praticien ->getCP();
+                $ville=$praticien ->getVille();
+                $coef=$praticien->getCoef();
+
+
+?>
+
+    <tr>
+            <td width=5%><?php echo $idPrat?></td><td width=80%><?php echo $nom?></a></td><td width=5%><?php echo $adresse?></td><td width=5%><?php echo $CP?></td><td width=5%><?php echo $ville?></td><td width=5%><?php echo $coef?></td><!--affichage dans des liens-->
+            <td class='action' width=15%>
+                <a href='index.php?uc=Praticiens&action=praticien&numprat=<?php echo $idPrat; ?>' class="imageRechercher" title='Voir la liste des spécialités'></a> 
+                
   <tr>
     <td><input type="radio"/></td>
     <td>Steve</td>
