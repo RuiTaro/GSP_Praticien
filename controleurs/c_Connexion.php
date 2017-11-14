@@ -10,7 +10,7 @@ switch($action)
 		if (!empty($login)) 
         {
              $_SESSION['connexion']=$login;
-             header("refresh: 0;url=vues/menuCR.php");
+             header("refresh: 0;url=index.php");
 
         }
 		
@@ -21,7 +21,7 @@ switch($action)
 		break;
 
     case 'connexion':
-    	include("vues/v_accueil.php");
+    	include("vues/v_connexion.php");
     	break;
 
     case 'deconnexion':
