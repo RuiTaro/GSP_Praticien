@@ -8,7 +8,7 @@
             <h1>Bienvenue</h1>
             <div class="box">
     <h1>Sign in</h1>
-    <form action="index.php?uc=administrer&action=verifConnexion" method='post'>       
+    <form action="index.php?uc=administrer&action=verifConnexion" method='POST'>       
         <div class="input-group">
             <input type="login" id="login"onblur="checkInput(this)" />
             <label for="login">Login</label>
