@@ -325,7 +325,7 @@ br.clearfix {
 /*css de la page de connexion*/
 .login {
     width:540px;
-    left: 2%;
+    left: 5%;
     height: 100vh;
     background-color: #344A85;
     position: absolute;
