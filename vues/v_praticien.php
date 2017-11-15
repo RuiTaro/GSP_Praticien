@@ -53,7 +53,12 @@
 		$(document).ready(function(){
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$('ul.tabs li').click(function(){
+=======
+	$('ul.tabs li').click(function()
+    {
+>>>>>>> 8fd46483ef01476753a4f7c4dd2f36aa2f13f768
 =======
 	$('ul.tabs li').click(function()
     {
@@ -68,8 +73,13 @@
 		})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	})
 	</script>
+=======
+    })
+    </script>
+>>>>>>> 8fd46483ef01476753a4f7c4dd2f36aa2f13f768
 =======
     })
     </script>
