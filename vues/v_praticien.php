@@ -1,7 +1,3 @@
-<?php
-include("vues/v_entete.php");
-?>
-
 <div id="page">
 	<div id="content">
         
@@ -58,7 +54,8 @@ include("vues/v_entete.php");
 <script type="text/javascript">
 	$(document).ready(function(){
 	
-	$('ul.tabs li').click(function(){
+	$('ul.tabs li').click(function()
+    {
 		var tab_id = $(this).attr('data-tab');
 
 		$('ul.tabs li').removeClass('current');
@@ -68,8 +65,8 @@ include("vues/v_entete.php");
 		$("#"+tab_id).addClass('current');
 	})
 
-})
-</script>
+    })
+    </script>
 			</section>
 		</div>
 	</div>
