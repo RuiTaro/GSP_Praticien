@@ -47,6 +47,8 @@
         						    <td><?php echo $ville; ?></td>
         						    <td><?php echo $coef; ?></td>
 						            <td></td>
+                                    <td></td>
+                                    <td></td>
                                     </tr>
 
                             <?php 
