@@ -1,7 +1,6 @@
 <head>
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
-<div id="block_co">
 <div class="login">
         <div class="form">
             <!-- <img src="https://travelplanet.pro/assets/img/Travel_Planet_blanc.png" alt=""> -->
@@ -495,7 +494,6 @@
     </g>
   </g>
 </svg>
-</div>
 <script type="text/javascript"> 
   function checkInput(input) {
     if (input.value.length > 0) {
