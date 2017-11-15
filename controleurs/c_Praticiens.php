@@ -28,7 +28,7 @@ switch($action)
 					{
 						header("refresh: 0;url=index.php?uc=Praticiens&action=recherchePrat");
 					}
-					break;;		
+					break;		
 					
 					 
 	case 'modifier' : // on appelle la même vue dans le cas d'un ajout ou d'une modification

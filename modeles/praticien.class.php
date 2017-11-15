@@ -1,70 +1,70 @@
 <?php
 class Praticien 
 {
-    private $id;
-    private $nom;
-    private $adresse;
-    private $cp;
-    private $ville;
-    private $coef;
+    private $Pra_Num;
+    private $Pra_Nom;
+    private $Pra_Adresse;
+    private $Pra_CP;
+    private $Pra_Ville;
+    private $Coefnotoriete;
 
    public function getId()
     {
-        return $this->id;
+        return $this->Pra_Num;
     }
     public function setId($value)
     {
-        $this->id=$value;
+        $this->Pra_Num=$value;
     }
 
     public function getNom()
     {
-        return $this->nom;
+        return $this->Pra_Nom;
     }
     public function setNom($value)
     {
-        $this->nom=$value;
+        $this->Pra_Nom=$value;
     }
 
     public function getAdresse()
     {
-        return $this->adresse;
+        return $this->Pra_Adresse;
     }
     public function setAdresse($value)
     {
-        $this->adresse=$value;
+        $this->Pra_Adresse=$value;
     }
 
     public function getCP()
     {
-        return $this->cp;
+        return $this->Pra_CP;
     }
     public function setCP($value)
     {
-        $this->cp=$value;
+        $this->Pra_CP=$value;
     }
 
     public function getVille()
     {
-        return $this->ville;
+        return $this->Pra_Ville;
     }
     public function setVille($value)
     {
-        $this->ville=$value;
+        $this->Pra_Ville=$value;
     }
 
     public function getCoef()
     {
-        return $this->coef;
+        return $this->Coefnotoriete;
     }
     public function setCoef($value)
     {
-        $this->coef=$value;
+        $this->Coefnotoriete=$value;
     }
 
     public function __toString()
     {
-        return "id : ". $this->id. " - nom : ".$this->nom;
+        return "id : ". $this->Pra_Num. " - nom : ".$this->Pra_Nom;
     }
 
     public static function getAll()
@@ -75,7 +75,7 @@ class Praticien
         return $lesPraticiens;
     }
 
-    public static function ajouterPraticien($nom,$adresse,$cp,$ville,$coef)
+    public static function ajouterPraticien($Pra_Num,$adresse,$cp,$ville,$coef)
     {
         $sql="insert into praticien values(null, :nom , :adresse, :cp, :ville, :coef)" ;
         $resultat=MonPdo::getInstance()->prepare($sql);

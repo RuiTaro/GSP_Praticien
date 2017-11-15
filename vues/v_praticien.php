@@ -27,7 +27,6 @@
 						    <th>Options</th>
 					  	</tr>
 				  
-				  		<tr> 
                             <?php
                                 foreach($lesPraticiens as $praticien) //parcours du tableau d'objets récupérés
                                 {   
@@ -37,18 +36,24 @@
                                     $CP=$praticien ->getCP();
                                     $ville=$praticien ->getVille();
                                     $coef=$praticien->getCoef();
+                                
+                            ?>
+                                    <tr> 
+                                    <td><input type="radio"/></td>
+        						    <td><?php echo $idPrat; ?></td>
+        						    <td><?php echo $nom; ?></td>
+        						    <td><?php echo $adresse; ?></td>
+        						    <td><?php echo $CP; ?></td>
+        						    <td><?php echo $ville; ?></td>
+        						    <td><?php echo $coef; ?></td>
+						            <td></td>
+                                    </tr>
+
+                            <?php 
+                                } 
                             ?>
 
-                            <td><input type="radio"/></td>
-						    <td><?php echo $idPrat; ?></td>
-						    <td><?php echo $nom; ?></td>
-						    <td><?php echo $adresse; ?></td>
-						    <td><?php echo $CP; ?></td>
-						    <td><?php echo $ville; ?></td>
-						    <td><?php echo $coef; ?></td>
-						  
-						    <td></td>
-				  		</tr>  
+				  		  
 					</table>	
 				</div>
 
