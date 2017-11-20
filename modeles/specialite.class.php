@@ -1,30 +1,30 @@
 <?php
 class Specialite 
 {
-    private $id;
-    private $libelle;
+    private $Spe_Code;
+    private $Spe_Libelle;
 
-   public function getId()
+   public function getSpe_Code()
     {
-        return $this->id;
+        return $this->Spe_Code;
     }
-    public function setId($value)
+    public function setSpe_Code($value)
     {
-        $this->id=$value;
+        $this->Spe_Code=$value;
     }
 
     public function getLibelle()
     {
-        return $this->libelle;
+        return $this->Spe_Libelle;
     }
     public function setLibelle($value)
     {
-        $this->libelle=$value;
+        $this->Spe_Libelle=$value;
     }
 
     public function __toString()
     {
-        return "id : ". $this->id. " - libelle : ".$this->libelle;
+        return "id : ". $this->Spe_Code. " - libelle : ".$this->Spe_Libelle;
     }
 
     public static function getAll()
@@ -35,48 +35,48 @@ class Specialite
         return $lesSpecialites;
     }
 
-    public static function ajouterSpecialite($libelle)
+    public static function ajouterSpecialite($Spe_Libelle)
     {
-        $sql="insert into specialite values(null, :libelle)";
+        $sql="insert into specialite values(null, :Spe_Libelle)";
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':libelle', $libelle);
+        $resultat->bindParam(':Spe_Libelle', $Spe_Libelle);
         $resultat->execute();
         throw new Exception("Problème dans l'ajout de specialite.") ;
     }
-    public static function supprimerSpecialite($id)
+    public static function supprimerSpecialite($Spe_Code)
     {
-        $sql="delete from specialite where id= :id " ;
+        $sql="delete from specialite where Spe_Code= :Spe_Code " ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':id', $id);
+        $resultat->bindParam(':Spe_Code', $Spe_Code);
         $resultat->execute();
         throw new Exception("Problème dans la suppression de specialite.") ;
     }
-    public static function findById($id)
+    public static function findById($Spe_Code)
     {
-        $sql="select * from specialite where id= ?" ;
+        $sql="select * from specialite where Spe_Code= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($id)); // applique le paramètre
+        $resultat->execute(array($Spe_Code)); // applique le paramètre
         $laSpecialite=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Specialite"); // lit la ligne et renvoie un objet Specialite
         return $laSpecialite[0];
    
     }
 
-    public static function findByName($libelle)
+    public static function findByName($Spe_Libelle)
     { 
-        $sql="select * from specialite where libelle= ?" ;
+        $sql="select * from specialite where Spe_Libelle= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($libelle)); // applique le paramètre
+        $resultat->execute(array($Spe_Libelle)); // applique le paramètre
         $Libelle_Specialite=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Specialite"); // lit la ligne et renvoie un objet Specialite
         return $Libelle_Specialite;
      
     }
 
     // modifie un objet Specialite
-    public static function modifierSpecialite($id,$libelle)
+    public static function modifierSpecialite($Spe_Code,$Spe_Libelle)
     {
-        $sql="update specialite set libelle= ? where id= ?" ;
+        $sql="update specialite set Spe_Libelle= ? where Spe_Code= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($libelle,$id)); // applique le paramètre
+        $resultat->execute(array($Spe_Libelle,$Spe_Code)); // applique le paramètre
         throw new Exception("Problème dans la modification de specialite.") ;
     } 
 }

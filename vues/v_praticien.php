@@ -23,7 +23,7 @@
 						    <th>Ville</th>
 						    <th>Coefficient</th>
 						    <th>Type</th>
-						    <th>Scpécialité</th>
+						    <th>Spécialité</th>
 						    <th>Options</th>
 					  	</tr>
 				  
@@ -64,15 +64,37 @@
 					  	<tr>
 						    <th>Sélection</th>
 						    <th data-th="Driver details"><span>Numéro</span></th>
-                            <th>Nom</th>
-						    <th>Adresse</th>
-						    <th>Code postale</th>
-						    <th>Ville</th>
-						    <th>Coefficient</th>
-						    <th>Type</th>
-						    <th>Scpécialité</th>
+                            <th>Libelle</th>
 						    <th>Options</th>
 					  	</tr>
+
+                        <?php
+                                foreach($lesSpecialites as $specialite) //parcours du tableau d'objets récupérés
+                                {   
+                                    $idSpec=$specialite->getSpe_Code();           
+                                    $Libelle=$specialite ->getLibelle(); 
+                                   
+                                
+                            ?>
+                            <tr> 
+                                    <td><input type="radio"/></td>
+                                    <td><?php echo $idSpec; ?></td>
+                                    <td><?php echo $Libelle; ?></td>
+                                    <td></td>
+                                    </tr>
+
+                            <?php 
+                                } 
+                            ?>
+
+
+
+
+
+
+
+
+
 				  
 					  	<tr>
 						    <td><input type="radio"/></td>
@@ -100,7 +122,7 @@
 					    <th>Ville</th>
 					    <th>Coefficient</th>
 					    <th>Type</th>
-					    <th>Scpécialité</th>
+					    <th>Spécialité</th>
 					    <th>Options</th>
 					  </tr>
 			  
