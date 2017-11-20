@@ -1,6 +1,6 @@
 <body bgcolor="white" text="5599EE">
 
-<div name="haut" style="margin: 2 2 2 2 ;height:6%;"><h1><span><a href="accueil.php"><img src="images/logo.jpg" width="100" height="60"/></a></span></div>
+<div name="haut" style="margin: 2 2 2 2 ;height:6%;"><h1><span><a href="vues/v_accueil.php"><img src="images/logo.jpg" width="100" height="60"/></a></span></div>
 <div name="gauche" style="float:left;width:100%; background-color:transparent; height:100%;"></div>
 
 	<div id="menu">
