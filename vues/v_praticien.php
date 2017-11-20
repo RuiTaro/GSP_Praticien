@@ -114,27 +114,26 @@
 					    <td></td>
 					    <td></td>
 					    <td></td>
-					  </tr>
-					  <script type="text/javascript">
-					  	$(document).ready(function(){
-					  
-					  	$('ul.tabs li').click(function(){
-					  	var tab_id = $(this).attr('data-tab');
-
-					  	$('ul.tabs li').removeClass('current');
-					  	$('.tab-content').removeClass('current');
-
-					  	$(this).addClass('current');
-					  	$("#"+tab_id).addClass('current');
-					  	})
-
-					  	})
-					  </script> 
+					  </tr>					  
 					</table>
 				</div>				
 			</div><!-- container -->	
 		</div>
 	</div>
-	<br class="clearfix" />
-	
-</div>    		
+	<br class="clearfix" />	
+</div>
+<script type="text/javascript">
+  	$(document).ready(function(){
+  
+  	$('ul.tabs li').click(function(){
+  	var tab_id = $(this).attr('data-tab');
+
+  	$('ul.tabs li').removeClass('current');
+  	$('.tab-content').removeClass('current');
+
+  	$(this).addClass('current');
+  	$("#"+tab_id).addClass('current');
+  	})
+
+  	})
+  </script>    		
