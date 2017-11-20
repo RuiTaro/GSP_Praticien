@@ -59,6 +59,10 @@ switch($action)
 					header("refresh: 0;url=index.php?uc=Praticien&action=all");
 					break;
 
+	case 'Spécialité' :
+					include("controleurs/c_Specialites.php");
+					break;
+
 
 
 	default: echo "rien";

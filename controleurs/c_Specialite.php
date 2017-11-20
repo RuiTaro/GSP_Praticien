@@ -6,7 +6,7 @@ switch($action)
 	case 'all': //pour afficher tous les specialites
 		{
 			$lesSpecialites=Specialite::getAll(); //on fait appel  à la méthode d'accès aux données de la classe Specialite
-			include("vues/v_albums.php");//puis on affiche la vue qui utilise les données
+			include("vues/v_specialite.php");//puis on affiche la vue qui utilise les données
 			break;
 		}
     
