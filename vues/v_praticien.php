@@ -13,7 +13,7 @@
 <div id="page">
 	<div id="content">        
 		<div class="box">
-			<h2>Liste des praticiens</h2>
+			<h2>Gestion praticiens</h2>
 			<div class="container">				
 				<div id="tabs">
 				<ul>
@@ -87,7 +87,7 @@
                                 
                             ?>
                             		<tr> 
-                                    <td><input type="radio"/></td>
+                                    <td><input type="checkbox"/></td>
                                     <td><?php echo $idSpec; ?></td>
                                     <td><?php echo $Libelle; ?></td>
                                     <td></td>
@@ -95,19 +95,8 @@
 
                             <?php 
                                 } 
-                            ?>
-				  
-					  	<tr>
-						    <td><input type="checkbox"/></td>
-						    <td></td>
-						    <td></td>
-						    <td></td>
-						    <td></td>
-						    <td></td>
-						    <td></td>
-						    <td></td>
-						    <td></td>
-					  	</tr>  
+                            ?>				  
+					  	 
 					</table>
 				</div>
 
