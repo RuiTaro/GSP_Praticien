@@ -12,7 +12,8 @@
 				<span class="opener">Medicaments</span>					
 			</li>
 			<li class="first">
-				<span class="opener"><a href="index.php?uc=Praticiens&action=all" >Praticiens</a></span>					
+				<span class="opener"><a href="index.php?uc=Praticiens&action=all" >Praticiens</a></span>
+									
 			</li>
 			<li class="first">
 				<span class="opener">Visiteurs</span>

@@ -17,9 +17,9 @@
 			<div class="container">				
 				<div id="tabs">
 				<ul>
-					<li><a href="#tabs-1">Praticien</a></li>
-					<li><a href="#tabs-2">Spécialité</a></li>
-					<li><a href="#tabs-3">Type praticien</a></li>		
+					<li><a href="index.php?uc=Praticiens&action=all&#tabs-1">Praticien</a></li>
+					<li><a href="index.php?uc=Specialites&action=all&#tabs-2">Spécialité</a></li>
+					<li><a href="index.php?uc=Type_Praticien&action=all&#tabs-3">Type praticien</a></li>		
 				</ul>
 
 				<div id="tabs-1" class="tab-content current">
