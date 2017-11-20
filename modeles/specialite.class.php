@@ -24,7 +24,7 @@ class Specialite
 
     public function __toString()
     {
-        return "id : ". $this->Spe_Code. " - libelle : ".$this->Spe_Libelle;
+        return "Id : ". $this->Spe_Code. " - Libellé : ".$this->Spe_Libelle;
     }
 
     public static function getAll()

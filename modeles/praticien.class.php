@@ -64,7 +64,7 @@ class Praticien
 
     public function __toString()
     {
-        return "id : ". $this->Pra_Num. " - nom : ".$this->Pra_Nom;
+        return "Id : ". $this->Pra_Num. " - Nom : ".$this->Pra_Nom;
     }
 
     public static function getAll()

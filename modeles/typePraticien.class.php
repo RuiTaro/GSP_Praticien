@@ -1,40 +1,30 @@
 <?php
 class TypePraticien 
 {
-    private $id;
-    private $libelle;
-    private $lieu;
+    private $Typ_Code;
+    private $Typ_Libelle;
 
    public function getId()
     {
-        return $this->id;
+        return $this->Typ_Code;
     }
     public function setId($value)
     {
-        $this->id=$value;
+        $this->Typ_Code=$value;
     }
 
     public function getLibelle()
     {
-        return $this->libelle;
+        return $this->Typ_Libelle;
     }
     public function setLibelle($value)
     {
-        $this->libelle=$value;
-    }
-
-    public function getLieu()
-    {
-        return $this->lieu;
-    }
-    public function setLieu($value)
-    {
-        $this->lieu=$value;
+        $this->Typ_Libelle=$value;
     }
 
     public function __toString()
     {
-        return "id : ". $this->id. " - libelle : ".$this->libelle;
+        return "Id : ". $this->Typ_Code. " - Libellé : ".$this->Typ_Libelle;
     }
 
     public static function getAll()
@@ -45,48 +35,48 @@ class TypePraticien
         return $lesTypePraticiens;
     }
 
-    public static function ajouterTypePraticiens($libelle,$lieu)
+    public static function ajouterTypePraticiens($Typ_Libelle)
     {
-        $sql="insert into type_praticien values(null, :libelle , :lieu)";
+        $sql="insert into type_praticien values(null, :Typ_Libelle)";
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':libelle', $libelle,':lieu', $lieu);
+        $resultat->bindParam(':Typ_Libelle', $Typ_Libelle);
         $resultat->execute();
         throw new Exception("Problème dans l'ajout de type de praticiens.") ;
     }
-    public static function supprimerTypePraticiens($id)
+    public static function supprimerTypePraticiens($Typ_Code)
     {
-        $sql="delete from type_praticien where id= :id " ;
+        $sql="delete from type_praticien where Typ_Code= :Typ_Code " ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':id', $id);
+        $resultat->bindParam(':Typ_Code', $Typ_Code);
         $resultat->execute();
         throw new Exception("Problème dans la suppression de type de praticiens.") ;
     }
-    public static function findById($id)
+    public static function findById($Typ_Code)
     {
-        $sql="select * from type_praticien where id= ?" ;
+        $sql="select * from type_praticien where Typ_Code= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($id)); // applique le paramètre
+        $resultat->execute(array($Typ_Code)); // applique le paramètre
         $leTypePraticien=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"TypePraticien"); // lit la ligne et renvoie un objet TypePraticien
         return $leTypePraticien[0];
    
     }
 
-    public static function findByName($libelle)
+    public static function findByName($Typ_Libelle)
     { 
-        $sql="select * from type_praticien where libelle= ?" ;
+        $sql="select * from type_praticien where Typ_Libelle= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($libelle)); // applique le paramètre
+        $resultat->execute(array($Typ_Libelle)); // applique le paramètre
         $Libelle_TypePraticien=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"TypePraticien"); // lit la ligne et renvoie un objet TypePraticien
         return $Libelle_TypePraticien;
      
     }
 
     // modifie un objet TypePraticien
-    public static function modifierTypePraticiens($id,$libelle)
+    public static function modifierTypePraticiens($Typ_Code,$Typ_Libelle)
     {
-        $sql="update type_praticien set libelle= ? where id= ?" ;
+        $sql="update type_praticien set Typ_Libelle= ? where Typ_Code= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($libelle,$id)); // applique le paramètre
+        $resultat->execute(array($Typ_Libelle,$Typ_Code)); // applique le paramètre
         throw new Exception("Problème dans la modification de type de praticiens.") ;
     }
 }
