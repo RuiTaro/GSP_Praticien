@@ -117,23 +117,24 @@
 					  </tr> 
 					</table>
 				</div>
+				<script type="text/javascript">
+					$(document).ready(function(){
+		
+					$('ul.tabs li').click(function(){
+					var tab_id = $(this).attr('data-tab');
+
+					$('ul.tabs li').removeClass('current');
+					$('.tab-content').removeClass('current');
+
+					$(this).addClass('current');
+					$("#"+tab_id).addClass('current');
+					})
+
+					})
+				</script>
 			</div><!-- container -->	
 		</div>
 	</div>
 	<br class="clearfix" />
-	<script type="text/javascript">
-	$(document).ready(function(){
 	
-		$('ul.tabs li').click(function(){
-			var tab_id = $(this).attr('data-tab');
-
-			$('ul.tabs li').removeClass('current');
-			$('.tab-content').removeClass('current');
-
-			$(this).addClass('current');
-			$("#"+tab_id).addClass('current');
-		})
-
-	})
-	</script>
 </div>    		
