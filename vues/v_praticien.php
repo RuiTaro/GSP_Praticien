@@ -39,7 +39,7 @@
                                 
                             ?>
                                     <tr> 
-                                    <td><input type="radio"/></td>
+                                    <td><input type="checkbox"/></td>
         						    <td><?php echo $idPrat; ?></td>
         						    <td><?php echo $nom; ?></td>
         						    <td><?php echo $adresse; ?></td>
@@ -97,7 +97,7 @@
 
 				  
 					  	<tr>
-						    <td><input type="radio"/></td>
+						    <td><input type="checkbox"/></td>
 						    <td></td>
 						    <td></td>
 						    <td></td>
@@ -127,7 +127,7 @@
 					  </tr>
 			  
 					  <tr>
-					    <td><input type="radio"/></td>
+					    <td><input type="checkbox"/></td>
 					    <td></td>
 					    <td></td>
 					    <td></td>
@@ -136,27 +136,26 @@
 					    <td></td>
 					    <td></td>
 					    <td></td>
-					  </tr> 
+					  </tr>					  
 					</table>
-				</div>
-				<script type="text/javascript">
-					$(document).ready(function(){
-		
-					$('ul.tabs li').click(function(){
-					var tab_id = $(this).attr('data-tab');
-
-					$('ul.tabs li').removeClass('current');
-					$('.tab-content').removeClass('current');
-
-					$(this).addClass('current');
-					$("#"+tab_id).addClass('current');
-					})
-
-					})
-				</script>
+				</div>				
 			</div><!-- container -->	
 		</div>
 	</div>
-	<br class="clearfix" />
-	
-</div>    		
+	<br class="clearfix" />	
+</div>
+<script type="text/javascript">
+  	$(document).ready(function(){
+  
+  	$('ul.tabs li').click(function(){
+  	var tab_id = $(this).attr('data-tab');
+
+  	$('ul.tabs li').removeClass('current');
+  	$('.tab-content').removeClass('current');
+
+  	$(this).addClass('current');
+  	$("#"+tab_id).addClass('current');
+  	})
+
+  	})
+  </script>    		
