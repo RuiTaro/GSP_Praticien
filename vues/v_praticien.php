@@ -1,3 +1,8 @@
+<!-- <?php		
+		//if (!empty( $_SESSION['connexion'])) // si quelqu'un est connecté
+			{ 
+	?><a class="btn" href='index.php?uc=GestionPraticiens&action=all'>Voir les praticiens</a>
+	  <?php } ?> -->
 <div id="tabs-1" class="tab-content current">
 	<table class="responstable">				  
 	  	<tr>
