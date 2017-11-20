@@ -18,8 +18,8 @@
 				<div id="tabs">
 				<ul>
 					<li><a href="#tabs-1">Praticien</a></li>
-					<li><a href="#tabs-2">Type praticien</a></li>
-					<li><a href="#tabs-3">Spécialité</a></li>		
+					<li><a href="#tabs-2">Spécialité</a></li>
+					<li><a href="#tabs-3">Type praticien</a></li>		
 				</ul>
 
 				<div id="tabs-1" class="tab-content current">
@@ -79,9 +79,6 @@
 						    <th>Options</th>
 					  	</tr>
 
-                        <?php
-                                include 'v_specialite.php'; 
-                       ?>				  
 					  	 
 					</table>
 				</div>
