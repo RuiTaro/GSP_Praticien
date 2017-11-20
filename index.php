@@ -24,6 +24,7 @@ switch($uc) //suivant le contrôleur dans uc
 		
 	case 'Praticiens' :                               //on va au contrôleur secondaire c_Praticiens
 		 include("controleurs/c_Praticiens.php");
+		 include ("controleurs/c_Specialites.php");		 
 		 break; 
 	 
 	case 'Specialites' :                               //on va au contrôleur secondaire c_Specialites
