@@ -7,11 +7,6 @@
 		    <th>Options</th>
 	  	</tr>
 	  	
-
-	  	 
-	</table>
-</div>
-
 <?php
     foreach($lesSpecialites as $specialite) //parcours du tableau d'objets récupérés
     {   
@@ -30,5 +25,10 @@
 <?php 
     } 
 ?>	
+	  	 
+	</table>
+</div>
+
+
 
 
