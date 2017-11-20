@@ -11,21 +11,19 @@
 </head>
 
 <div id="page">
-	<div id="content">
-        
+	<div id="content">        
 		<div class="box">
 			<h2>Liste des praticiens</h2>
 			<div class="container">				
 				<div id="tabs">
-				<ul class="tabs">
-					<li class="tab-link current" data-tab="tab-1">Praticien</li>
-					<li class="tab-link" data-tab="tab-2">Type praticien</li>
-					<li class="tab-link" data-tab="tab-3">Spécialité</li>		
+				<ul>
+					<li><a href="#tabs-1">Praticien</a></li>
+					<li><a href="#tabs-2">Type praticien</a></li>
+					<li><a href="#tabs-3">Spécialité</a></li>		
 				</ul>
 
-				<div id="tab-1" class="tab-content current">
-					<table class="responstable">
-				  
+				<div id="tabs-1" class="tab-content current">
+					<table class="responstable">				  
 					  	<tr>
 						   	<th>Sélection</th>
 						    <th data-th="Driver details"><span>Numéro</span></th>
@@ -71,7 +69,7 @@
 					</table>	
 				</div>
 
-				<div id="tab-2" class="tab-content">
+				<div id="tabs-2" class="tab-content">
 					<table class="responstable"> 
 					  	<tr>
 						    <th>Sélection</th>
@@ -113,7 +111,7 @@
 					</table>
 				</div>
 
-				<div id="tab-3" class="tab-content">
+				<div id="tabs-3" class="tab-content">
 					<table class="responstable">
 			  
 					  <tr>
