@@ -86,12 +86,12 @@
                                    
                                 
                             ?>
-                            <tr> 
+                            		<tr> 
                                     <td><input type="radio"/></td>
                                     <td><?php echo $idSpec; ?></td>
                                     <td><?php echo $Libelle; ?></td>
                                     <td></td>
-                                    </tr>
+                            		</tr>
 
                             <?php 
                                 } 
