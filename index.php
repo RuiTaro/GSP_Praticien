@@ -22,9 +22,8 @@ switch($uc) //suivant le contrôleur dans uc
 		include("vues/v_connexion.php");  //page d'accueil
 		break;
 		
-	case 'Praticiens' :                               //on va au contrôleur secondaire c_Praticiens
-		 include("controleurs/c_Praticiens.php");
-		 include ("controleurs/c_Specialites.php");		 
+	case 'GestionPraticiens' :                               //on va au contrôleur secondaire c_Praticiens
+		 include("controleurs/c_gestionPraticien.php");		 	 
 		 break; 
 	 
 	case 'Specialites' :                               //on va au contrôleur secondaire c_Specialites
