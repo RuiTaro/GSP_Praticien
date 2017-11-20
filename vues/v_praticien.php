@@ -1,10 +1,22 @@
+<head>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	$( function() {
+	$( "#tabs" ).tabs();
+	} );
+	</script>
+</head>
+
 <div id="page">
 	<div id="content">
         
 		<div class="box">
 			<h2>Liste des praticiens</h2>
 			<div class="container">				
-
+				<div id="tabs">
 				<ul class="tabs">
 					<li class="tab-link current" data-tab="tab-1">Praticien</li>
 					<li class="tab-link" data-tab="tab-2">Type praticien</li>
@@ -86,15 +98,6 @@
                             <?php 
                                 } 
                             ?>
-
-
-
-
-
-
-
-
-
 				  
 					  	<tr>
 						    <td><input type="checkbox"/></td>
@@ -138,7 +141,8 @@
 					    <td></td>
 					  </tr>					  
 					</table>
-				</div>				
+				</div>	
+			  </div>			
 			</div><!-- container -->	
 		</div>
 	</div>
