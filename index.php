@@ -19,6 +19,10 @@ else
 switch($uc) //suivant le contrôleur dans uc
 {
 	case 'accueil':
+		include("vues/v_accueil.php");  //page d'accueil
+		break;
+
+	case 'FormConnexion':
 		include("vues/v_connexion.php");  //page d'accueil
 		break;
 		
