@@ -6,17 +6,13 @@
             <th>Libelle</th>
 		    <th>Options</th>
 	  	</tr>
-	  	
 
-	  	 
-	</table>
-</div>
 
-<?php
-    foreach($lesTypePraticiens as $TypePraticiens) //parcours du tableau d'objets récupérés
-    {   
-        $IdTypePrat=$TypePraticiens->getId();           
-        $Libelle=$TypePraticiens ->getLibelle(); 
+	  	<?php
+    		foreach($lesTypePraticiens as $TypePraticien) //parcours du tableau d'objets récupérés
+    		{   
+		        $IdTypePrat=$TypePraticien->getId();           
+		        $Libelle=$TypePraticien ->getLibelle(); 
        
     
 ?>
@@ -29,6 +25,12 @@
 
 <?php 
     } 
-?>	
+?>
+
+	  	 
+	</table>
+</div>
+
+	
 
 
