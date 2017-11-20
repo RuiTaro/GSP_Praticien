@@ -4,6 +4,7 @@
 		<div class="box">
 			<h2>Liste des praticiens</h2>
 			<div class="container">
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 				<ul class="tabs">
 					<li class="tab-link current" data-tab="tab-1">Praticien</li>
@@ -143,19 +144,4 @@
 		</div>
 	</div>
 	<br class="clearfix" />	
-</div>
-<script type="text/javascript">
-  	$(document).ready(function(){
-  
-  	$('ul.tabs li').click(function(){
-  	var tab_id = $(this).attr('data-tab');
-
-  	$('ul.tabs li').removeClass('current');
-  	$('.tab-content').removeClass('current');
-
-  	$(this).addClass('current');
-  	$("#"+tab_id).addClass('current');
-  	})
-
-  	})
-  </script>    		
+</div>	
