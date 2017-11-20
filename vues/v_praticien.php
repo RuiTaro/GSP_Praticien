@@ -68,7 +68,8 @@
 				  		  
 					</table>	
 				</div>
-
+				
+				
 				<div id="tabs-2" class="tab-content">
 					<table class="responstable"> 
 					  	<tr>

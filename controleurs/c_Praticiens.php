@@ -58,6 +58,9 @@ switch($action)
 					$sup= Praticien::supprimerPraticien($_REQUEST['numprat']);
 					header("refresh: 0;url=index.php?uc=Praticien&action=all");
 					break;
+
+
+
 	default: echo "rien";
 } 
 ?>
