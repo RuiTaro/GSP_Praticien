@@ -14,6 +14,8 @@
 			<h1><a href="index.php"></a></h1>
 		</div>
 		<div id="slogan">
+			<div name="haut" style="margin: 2 2 2 2 ;height:6%;"><h1><span><a href="index.php?uc=accueil"><img src="images/logo.jpg" width="100" height="60"/></a></span></div>
+			<div name="gauche" style="float:left;width:100%; background-color:transparent; height:100%;"></div>
 		<?php If (!empty( $_SESSION['connexion'])) // si quelqu'un est connecté
 			{ 
 			echo '<a class="btn" href="index.php?uc=administrer&action=deconnexion">se deconnecter</a>';
