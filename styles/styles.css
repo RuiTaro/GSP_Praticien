@@ -780,15 +780,15 @@ body{
   background: #fff;  
   border-radius: 10px;  
 }
-/*.responstable tr {
+.responstable tr {
   border: 1px solid #013967;
 }
 .responstable tr:nth-child(odd) {
   background-color: #fff;
-}*/
+}
 .responstable th {
   display: none;
-  /*border: 1px solid #fff;*/
+  border: 1px solid #fff;
   background-color: #013967;
   color: #fff;
   padding: 1em;
@@ -822,11 +822,11 @@ body{
 .responstable td:first-child {
   display: table-cell;
   text-align: center;
-  /*border-right: 1px solid #d9e4e6;*/
+  border-right: 1px solid #d9e4e6;
 }
 @media (min-width: 480px) {
   .responstable td {
-    /*border: 1px solid #d9e4e6;*/
+    border: 1px solid #d9e4e6;
   }
 }
 .responstable th,
