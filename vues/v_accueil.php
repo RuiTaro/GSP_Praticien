@@ -7,13 +7,7 @@
 					Bonne navigation sur le site d'Alexia, Pavithug et Louis
 				</p>
 				<img src="images/drole.jpg" style="width: 200px; height: 200px;" />				
-			</div>
-			<div class="box" id="content-box1">
-				
-			</div>
-			<div class="box" id="content-box2">
-				
-			</div>
+			</div>			
 		</div>
 		<br class="clearfix" />			
 </div>
