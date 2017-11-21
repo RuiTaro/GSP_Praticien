@@ -737,12 +737,13 @@ body{
       margin: 0px;
       padding: 0px;
       list-style: none;
+      background-color: #013967;
     }
     .ui-tabs .ui-tabs-nav{
       background-color: #013967;
     }
 
-    .ui-tabs .ui-tabs-nav .ui-tabs-anchor .ui-widget.ui-widget-content{
+    .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
       background-color: #013967;
       color: white;
     }
