@@ -737,19 +737,7 @@ body{
       margin: 0px;
       padding: 0px;
       list-style: none;      
-    }
-
-    .ui-widget.ui-widget-content{
-      background-color: #013967;
-      border: 4px solid #0074d970;
-    }
-
-    .ui-tabs .ui-tabs-panel{
-      background-color: #0074d970;
-    }
-    .ui-tabs .ui-tabs-nav{
-      background-color: #0074d970
-    }
+    }    
 
     .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
       background-color: #013967;
