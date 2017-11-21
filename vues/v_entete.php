@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="styles/styles.css" />
 </head>
 <body>
-<div id="wrapper">
+<div id="wrapper"> 
 	<div id="header">
 		<div id="logo">
 			<h1><a href="index.php"></a></h1>
