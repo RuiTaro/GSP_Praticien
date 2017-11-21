@@ -23,7 +23,7 @@
         <td><input type="checkbox"/></td>
         <td><?php echo $idSpec; ?></td>
         <td><?php echo $Libelle; ?></td>
-        <td><img src="images/btn_rechercher_inactif.gif" style="height: 35px; border: 1px solid; border-radius: 10px; margin: 10px; width: 40px;" /></td>
+        <td><img src="images/btn_modifier_inactif.gif" style="height: 35px; border: 1px solid; border-radius: 10px; margin: 10px; width: 40px;" /></td>
 		</tr>
 
 <?php 
