@@ -773,10 +773,8 @@ body{
   margin: 1em 0;
   width: 100%;
   overflow: hidden;
-  background: #fff;
-  color: #024457;
-  border-radius: 10px;
-  border: 1px solid #167f92;
+  background: #fff;  
+  border-radius: 10px;  
 }
 .responstable tr {
   border: 1px solid #013967;
