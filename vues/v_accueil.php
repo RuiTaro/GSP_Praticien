@@ -5,8 +5,8 @@
 				<h2>Bienvenue</h2>
 				<p>
 					Bonne navigation sur le site d'Alexia, Pavithug et Louis
-					<img src="images/drole.jpg"/>
-				</p>				
+				</p>
+				<img src="images/drole.jpg" style="width: 200px; height: 200px;" />				
 			</div>
 			<div class="box" id="content-box1">
 				
