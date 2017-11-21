@@ -736,7 +736,10 @@ body{
     ul.tabs{
       margin: 0px;
       padding: 0px;
-      list-style: none;
+      list-style: none;      
+    }
+    
+    .ui-widget.ui-widget-content{
       background-color: #013967;
     }
     .ui-tabs .ui-tabs-nav{
