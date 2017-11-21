@@ -38,7 +38,7 @@
 				    <td><?php echo $coef; ?></td>
 		            <td></td>
                     <td></td>
-                    <td><div class="btn-ajout"><img src="images/btn_rechercher_inactif.gif" width="100" height="35"/></div></td>
+                    <td><img src="images/btn_rechercher_inactif.gif" width="40" height="40"/></td>
                     </tr>
 
             <?php 
