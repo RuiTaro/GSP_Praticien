@@ -10,7 +10,8 @@ body{
 #page {  
   width : 65%;
   margin : auto ;
-  border : 0.2em solid black;
+  background-color: #013967;
+  border-radius: 5px;
   padding : 0.1em;
 }
 #entete{  
