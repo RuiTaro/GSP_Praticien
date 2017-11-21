@@ -742,11 +742,11 @@ body{
       background-color: #013967;
     }
 
-    .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+    .ui-tabs .ui-tabs-nav .ui-tabs-anchor .ui-widget.ui-widget-content{
       background-color: #013967;
       color: white;
     }
-    ul.tabs li{
+      ul.tabs li{
       background: #033b6b;
       color: #fff;
       display: inline-block;
