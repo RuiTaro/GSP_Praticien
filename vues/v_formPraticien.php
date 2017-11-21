@@ -7,7 +7,7 @@
 			$LePraticien=Praticien::findById($_REQUEST['numprat']); // trouve le Praticien et on renvoie un objet Praticien
 		}
 		?>
-			<h2>Fiche Praticien</h2>
+			<h2>Fiche Praticien</h2> 
 			<section>
 				<form action='index.php?uc=Praticien&action=VerifForm' method='post'>
 				<input type='hidden' name="idPraticien" value='<?php if(!empty($_REQUEST['numprat'])){echo $LePraticien->getId();}?>'>
