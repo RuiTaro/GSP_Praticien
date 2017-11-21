@@ -1,5 +1,6 @@
 <div id="tabs-1" class="tab-content current">
-	<table class="responstable">				  
+	<table class="responstable">
+		<img src="images/ajouter.jpg" width="100" height="60"/>				  
 	  	<tr>
 		   	<th>Sélection</th>
 		    <th data-th="Driver details"><span>Numéro</span></th>

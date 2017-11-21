@@ -23,7 +23,7 @@ switch($uc) //suivant le contrôleur dans uc
 		break;
 
 	case 'FormConnexion':
-		include("vues/v_connexion.php");  //page d'accueil
+		include("vues/v_connexion.php");  //page de connexion
 		break;
 		
 	case 'GestionPraticiens' :                               //on va au contrôleur secondaire c_Praticiens
