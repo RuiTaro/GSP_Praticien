@@ -507,4 +507,5 @@
   }</script>
 </div>
 </div>
+<br class="clearfix" />
 </div>
