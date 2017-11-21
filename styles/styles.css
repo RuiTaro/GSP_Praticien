@@ -9,7 +9,7 @@ body{
 }
 #page {  
   width : 65%;
-  margin : auto ;
+  margin : 30px auto ;
   background-color: #013967;
   border-radius: 5px;
   padding : 0.1em;
@@ -267,7 +267,7 @@ br.clearfix {
 #menu {
   padding: 0 45px 0 45px;
   position: relative;  
-  margin-bottom: 150px;
+  margin: 30px auto;
   height: 60px;  
   border-top: solid 1px ;
   border-bottom: solid 1px;  
