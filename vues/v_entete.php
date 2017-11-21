@@ -18,7 +18,7 @@
 			{ 
 			echo '<a class="btn" href="index.php?uc=administrer&action=deconnexion">se deconnecter</a>';
 			}else{
-			echo '<a class="btn" href="index.php?uc=administrer&action=connexion"><img src="images/co.png" width="100" height="60"/></a>';
+			echo '<a class="btn" href="index.php?uc=administrer&action=connexion"><img src="images/co.png" style="width: 170px;"/></a>';
 			} ?>			
 		</div>
 	</div>
