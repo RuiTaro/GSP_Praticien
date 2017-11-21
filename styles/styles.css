@@ -738,6 +738,14 @@ body{
       padding: 0px;
       list-style: none;
     }
+    .ui-tabs .ui-tabs-nav{
+      background-color: #013967;
+    }
+
+    .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+      background-color: #013967;
+      color: white;
+    }
     ul.tabs li{
       background: #033b6b;
       color: #fff;
