@@ -75,27 +75,27 @@ class Praticien
         return $lesPraticiens;
     }
 
-    public static function ajouterPraticien($Pra_Num,$adresse,$cp,$ville,$coef)
+    public static function ajouterPraticien($Pra_Num,$Pra_Nom,$Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
     {
         $sql="insert into praticien values(null, :nom , :adresse, :cp, :ville, :coef)" ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':nom', $nom,':adresse', $adresse,':cp', $cp,':ville', $ville,':coef', $coef);
+        $resultat->bindParam(':nom', $Pra_Nom,':adresse', $Pra_Adresse,':cp', $Pra_CP,':ville', $Pra_Ville,':coef', $Coefnotoriete);
         $resultat->execute();
         throw new Exception("Problème dans l'ajout de praticien.") ;
     }
-    public static function supprimerPraticien($id)
+    public static function supprimerPraticien($Pra_Num)
     {
-        $sql="delete from praticien where Pra_Num= :id " ;
+        $sql="delete from praticien where Pra_Num= :Pra_Num " ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':id', $id);
+        $resultat->bindParam(':Pra_Num', $Pra_Num);
         $resultat->execute();
         throw new Exception("Problème dans la suppression de praticien.") ;
     }
-    public static function findById($id)
+    public static function findById($Pra_Num)
     {
         $sql="select * from praticien where Pra_Num= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($id)); // applique le paramètre
+        $resultat->execute(array($Pra_Num)); // applique le paramètre
         $lePraticien=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Praticien"); // lit la ligne et renvoie un objet Praticien
         return $lePraticien[0];
    
@@ -112,11 +112,11 @@ class Praticien
     }
 
     // modifie un objet Praticien
-    public static function modifierPraticien($id,$nom)
+    public static function modifierPraticien($Pra_Num,$Pra_Nom)
     {
-        $sql="update praticien set Pra_Nom= ? where id= ?" ;
+        $sql="update praticien set Pra_Nom= ? where Pra_Num= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($nom,$id)); // applique le paramètre
+        $resultat->execute(array($Pra_Nom,$Pra_Num)); // applique le paramètre
         throw new Exception("Problème dans la modification de praticien.") ;
     }
     /**s
