@@ -18,7 +18,7 @@
 			<!-- <div name="gauche" style="float:left;width:100%; background-color:transparent; height:100%;"></div> -->
 			<?php If (!empty( $_SESSION['connexion'])) // si quelqu'un est connecté
 				{ 
-				echo '<a class="btn" href="index.php?uc=administrer&action=deconnexion">se deconnecter</a>';
+				echo '<a class="btn" href="index.php?uc=administrer&action=deconnexion"><img src="images/deco.png" style="width: 170px;"/></a>';
 				}else{
 				echo '<a class="btn" href="index.php?uc=administrer&action=connexion"><img src="images/co.png" style="width: 170px;"/></a>';
 				} ?>
