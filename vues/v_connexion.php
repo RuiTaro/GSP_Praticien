@@ -1,6 +1,5 @@
 <div id="page">
-  <div id="content">
-    <div class="box">         
+  <div id="content">        
       <div class="login">
         <div class="form">
           <!-- <img src="https://travelplanet.pro/assets/img/Travel_Planet_blanc.png" alt=""> -->
@@ -502,7 +501,6 @@
           input.className = '';
       }
       }</script>
-    <div>
   </div>
   <br class="clearfix" />
 </div> 
