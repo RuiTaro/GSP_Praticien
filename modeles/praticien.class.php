@@ -75,19 +75,19 @@ class Praticien
         return $lesPraticiens;
     }
 
-    public static function ajouterPraticien($Pra_Num,$Pra_Nom,$Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
+    public static function ajouterPraticien($Pra_Nom)//$Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
     {
-        $sql="insert into praticien values(null, :nom , :adresse, :cp, :ville, :coef)" ;
+        $sql="insert into praticien values('', :Pra_Nom )" ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':nom', $Pra_Nom,':adresse', $Pra_Adresse,':cp', $Pra_CP,':ville', $Pra_Ville,':coef', $Coefnotoriete);
+        $resultat->bindParam(':Pra_Nom', $Pra_Nom);
         $resultat->execute();
         throw new Exception("Problème dans l'ajout de praticien.") ;
     }
     public static function supprimerPraticien($Pra_Num)
     {
-        $sql="delete from praticien where Pra_Num= :Pra_Num " ;
+        $sql="delete from praticien where Pra_Num= :id " ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':Pra_Num', $Pra_Num);
+        $resultat->bindParam(':id', $Pra_Num);
         $resultat->execute();
         throw new Exception("Problème dans la suppression de praticien.") ;
     }

@@ -9,15 +9,23 @@
 		?>
 			<h2>Fiche Praticien</h2> 
 			<section>
-				<form action="index.php?uc=Praticien&action=VerifForm" method="post">
+				<form action="index.php?uc=GestionPraticiens&action=VerifForm" method="post">
 				<input type="hidden" name="Pra_Num" value='<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getId();}?>'>
-				<label for="nomPraticien"> Nom du praticien </label> <input type="text" name="nomPraticien" id="nomPraticien" 
-				value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getNom();} ?>">
-				<input type="submit" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo "Modifier le praticien";}else{echo "Ajouter le praticien";} ?>" />
+				<label for="nomPrat">Nom</label> 
+				<input type="text" name="nomPrat" id="nomPrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getNom();} ?>"><!-- 
+				<label for="AdressePrat">Adresse</label> 
+				<input type="text" name="AdressePrat" id="AdressePrat" value="<?php //if(!empty($_REQUEST['Pra_Num'])){echo $//LePraticien->getAdresse();} ?>">
+				<label for="CPPrat">Code postal</label> 
+				<input type="text" name="CPPrat" id="CPPrat" value="<?php //if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien//->getCP();} ?>">
+				<label for="VillePrat">Ville</label> 
+				<input type="text" name="VillePrat" id="VillePrat" value="<?php //if(!empty($_REQUEST['Pra_Num'])){echo $//LePraticien->getVille();} ?>">
+				<label for="CoefnotorietePrat">Coefficient de notoriété</label>  -->
+				<!-- <input type="text" name="CoefnotorietePrat" id="CoefnotorietePrat" value="<?php //if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getCoef();} ?>"> -->
+
+				<input type="submit" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo "Modifier le praticien";}else{echo "Ajouter le praticien";} ?>"/>
 				</form>
 			</section>
 		</div>
 	</div>
 	<br class="clearfix" />
 </div>
-
