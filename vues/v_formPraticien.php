@@ -3,8 +3,17 @@
 		<div class="box">
 		<?php
 		// si la variable $_REQUEST['Pra_Num'] est vide c'est qu'il s'agit d'un nouvel Praticien à créer
-		if(!empty($_REQUEST['Pra_Num'])){ // si on demande une modification d'un Praticien
+		if(!empty($_REQUEST['Pra_Num']))
+		{ // si on demande une modification d'un Praticien
 			$LePraticien=Praticien::findById($_REQUEST['Pra_Num']); // trouve le Praticien et on renvoie un objet Praticien
+			$lesTypePraticiens=TypePraticien::findById($_REQUEST['Typ_Code'])
+		}
+		?>
+
+		<?php
+		if(!empty($_REQUEST['Typ_Code']))
+		{ 
+			$lesTypePraticiens=TypePraticien::findById($_REQUEST['Typ_Code'])
 		}
 		?>
 			<h2>Fiche Praticien</h2> 
@@ -19,7 +28,7 @@
 				<label for="TypePrat">Type du praticien</label> 
 				<select name="TypePrat" id="TypePrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getTypeP();} ?>">
 					<?php 
-					var_dump($lesTypePraticiens);
+
 						foreach($lesTypePraticiens as $TypePraticien)
 							{
 								echo "<option value=".$TypePraticien->getIdTP().">".$TypePraticien->getLibelleTP().

@@ -11,7 +11,7 @@
 			<h2>Les Praticiens</h2>
 			<section>
 				<form action='index.php?uc=Praticien&action=resultat' method='POST'>
-				<input type='hidden' name="Pra_Num" value='<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getId();}?>'>
+				<input type='hidden' name="Pra_Num" value='<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getIdP();}?>'>
 				<label for "nomPraticien">Nom du Praticien</label> <input type="text" name="nomPraticien" id="nomPraticien" 
 				value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getNom();} ?>">
 				<input type="submit" value="Lancer"/>
