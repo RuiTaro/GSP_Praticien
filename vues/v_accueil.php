@@ -1,7 +1,7 @@
 
 <div id="page">
 		<div id="content">
-			<div class="box">
+			<div class="boxtab">
 				<h2>Bienvenue</h2>
 				<p>
 					Bonne navigation sur le site d'Alexia, Pavithug et Louis
