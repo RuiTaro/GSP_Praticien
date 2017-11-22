@@ -1,4 +1,4 @@
-  <div id="page">
+  <div id="page" style="background-color: transparent;padding: 1%;">
     <div class="login">
         <div class="form">
           <!-- <img src="https://travelplanet.pro/assets/img/Travel_Planet_blanc.png" alt=""> -->
