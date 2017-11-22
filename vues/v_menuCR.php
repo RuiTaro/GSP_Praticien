@@ -18,9 +18,9 @@
 				<span class="opener"><a>
 					<?php If (!empty( $_SESSION['connexion'])) // si quelqu'un est connecté
 				{ 
-				echo '<a class="btn" href="index.php?uc=administrer&action=deconnexion"><img src="images/deco.png" style="width: 170px; margin-left: 80%;"/></a>';
+				echo '<a class="btn" href="index.php?uc=administrer&action=deconnexion"><img src="images/deco.png"/></a>';
 				}else{
-				echo '<a class="btn" href="index.php?uc=administrer&action=connexion"><img src="images/co.png" style="width: 170px; margin-left: 80%;"/></a>';
+				echo '<a class="btn" href="index.php?uc=administrer&action=connexion"><img src="images/co.png"/></a>';
 				} ?>
 				</a></span>
 			</li>
