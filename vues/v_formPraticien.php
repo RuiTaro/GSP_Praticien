@@ -7,10 +7,8 @@
 		{ // si on demande une modification d'un Praticien
 			$LePraticien=Praticien::findById($_REQUEST['Pra_Num']); // trouve le Praticien et on renvoie un objet Praticien
 		}
-		if(!empty($_REQUEST['Typ_Code']))
-		{ 
-			$lesTypePraticiens=TypePraticien::findById($_REQUEST['Typ_Code']);
-		}
+		 
+		$lesTypePraticiens=TypePraticien::getAll($_REQUEST['Typ_Code']);
 		?>
 			<h2>Fiche Praticien</h2> 
 			<section>
@@ -27,8 +25,11 @@
 
 						foreach($lesTypePraticiens as $TypePraticien)
 							{
-								echo "<option value=".$TypePraticien->getIdTP().">".$TypePraticien->getLibelleTP().
-								"</option>";
+								echo "<option value=". $TypePraticien->getIdTP() ." "; 
+								if(!empty($_REQUEST['Typ_Code']) && ($_REQUEST['Typ_Code'])== $TypePraticien->getIdTP()){
+									echo "selected";
+								}
+								echo ">".$TypePraticien->getLibelleTP() ."</option>";
 							} 
 
 					?>
