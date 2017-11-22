@@ -1,3 +1,4 @@
+<div id="wrapper">
 <div id="page">
   <div id="content">          
       <div class="login">
@@ -503,4 +504,5 @@
   }</script>
 </div>
 <br class="clearfix" />
+</div>
 </div>
