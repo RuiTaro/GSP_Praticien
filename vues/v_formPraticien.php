@@ -18,10 +18,10 @@
 
 				<input type="hidden" name="Pra_Num" value='<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getIdP();}?>'> 
 
-				<label for="nomPrat">Nom</label> 
+				<label for="nomPrat"><font color="#A52A2A">Nom</font></label> 
 				<input type="text" name="nomPrat" id="nomPraticien" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getNom();} ?>"><br><br>
 
-				<label for="TypePrat">Type du praticien</label> 
+				<label for="TypePrat"><font color="#A52A2A">Type du praticien</font></label> 
 				<select name="TypePrat" id="TypePrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getTypeP();} ?>">
 					<?php 
 
@@ -34,16 +34,16 @@
 					?>
 				</select><br><br>
 
-				<label for="AdressePrat">Adresse</label> 
+				<label for="AdressePrat"><font color="#A52A2A">Adresse</font></label> 
 				<input type="text" name="AdressePrat" id="AdressePrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getAdresse();} ?>"><br><br>
 
-				<label for="CPPrat">Code postal</label> 
+				<label for="CPPrat"><font color="#A52A2A">Code postal</font></label> 
 				<input type="text" name="CPPrat" id="CPPrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getCP();} ?>"><br><br>
 
-				<label for="VillePrat">Ville</label> 
+				<label for="VillePrat"><font color="#A52A2A">Ville</font></label> 
 				<input type="text" name="VillePrat" id="VillePrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getVille();} ?>"><br><br>
 
-				<label for="CoefnotorietePrat">Coefficient de notoriété</label> 
+				<label for="CoefnotorietePrat"><font color="#A52A2A">Coefficient de notoriété</font></label> 
 				<input type="text" name="CoefnotorietePrat" id="CoefnotorietePrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getCoef();} ?>"><br><br><br><br>
 
 				<input type="submit" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo "Modifier le praticien";}else{echo "Ajouter le praticien";} ?>"/>
