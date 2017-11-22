@@ -1,8 +1,8 @@
   <div id="page">
     <div id="content">
-      <div class="box">
+      <div class="boxtab">
          <div class="login">
-        <div class="form">
+          <div class="form">
           <!-- <img src="https://travelplanet.pro/assets/img/Travel_Planet_blanc.png" alt=""> -->
           <h1>Bienvenue</h1>
             <div class="box">

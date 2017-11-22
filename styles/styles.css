@@ -838,6 +838,14 @@ body{
 .btn-ajout{
   margin-bottom: 0;
 }
+.boxtab  {
+    width: 90%;
+    margin: auto;
+    padding: auto;    
+    border-radius: 2px;
+    box-shadow: $shadow2;
+    background-color: #013967;
+}
 
 
 /*fin tableau*/

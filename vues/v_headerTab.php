@@ -12,7 +12,7 @@
 
 <div id="page">
 	<div id="content">        
-		<div class="box">
+		<div class="boxtab">
 			<h2>Gestion praticiens</h2>
 			<div class="container">				
 				<div id="tabs">
