@@ -6,7 +6,7 @@
 		if(!empty($_REQUEST['Pra_Num']))
 		{ // si on demande une modification d'un Praticien
 			$LePraticien=Praticien::findById($_REQUEST['Pra_Num']); // trouve le Praticien et on renvoie un objet Praticien
-		
+		}
 		if(!empty($_REQUEST['Typ_Code']))
 		{ 
 			$lesTypePraticiens=TypePraticien::findById($_REQUEST['Typ_Code']);
