@@ -11,7 +11,7 @@
 			<section>
 				<form action="index.php?uc=GestionPraticiens&action=VerifForm" method="post">
 				<input type="hidden" name="Pra_Num" value='<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getId();}?>'>
-				<label for="nomPrat"><font color="red">Nom du praticien à ajouter</font></label> 
+				<label for="nomPrat"><font color="#A52A2A">Nom du praticien à ajouter</font></label> 
 				<input type="text" name="nomPrat" id="nomPrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getNom();} ?>"><!-- 
 				<label for="AdressePrat">Adresse</label> 
 				<input type="text" name="AdressePrat" id="AdressePrat" value="<?php //if(!empty($_REQUEST['Pra_Num'])){echo $//LePraticien->getAdresse();} ?>">
