@@ -19,8 +19,7 @@
                   <input type="submit" value="Se connecter">
               </form>
             </div>
-          </div>
-        </div>    
+          </div>           
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 910.91 768">
       <title>loginScene</title>
       <g style="isolation: isolate">
@@ -492,6 +491,7 @@
       </g>
       </g>
       </svg>
+      </div> 
       <script type="text/javascript"> 
       function checkInput(input) {
       if (input.value.length > 0) {
