@@ -4,20 +4,20 @@ class TypePraticien
     private $Typ_Code;
     private $Typ_Libelle;
 
-   public function getId()
+   public function getIdTP()
     {
         return $this->Typ_Code;
     }
-    public function setId($value)
+    public function setIdTP($value)
     {
         $this->Typ_Code=$value;
     }
 
-    public function getLibelle()
+    public function getLibelleTP()
     {
         return $this->Typ_Libelle;
     }
-    public function setLibelle($value)
+    public function setLibelleTP($value)
     {
         $this->Typ_Libelle=$value;
     }

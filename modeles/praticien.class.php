@@ -2,19 +2,28 @@
 class Praticien 
 {
     private $Pra_Num;
+    private $Type_Pra;
     private $Pra_Nom;
     private $Pra_Adresse;
     private $Pra_CP;
     private $Pra_Ville;
     private $Coefnotoriete;
 
-   public function getId()
+   public function getIdP()
     {
         return $this->Pra_Num;
     }
-    public function setId($value)
+    public function setIdP($value)
     {
         $this->Pra_Num=$value;
+    }
+     public function getTypeP()
+    {
+        return $this->Type_Pra;
+    }
+    public function setTypeP($value)
+    {
+        $this->Type_Pra=$value;
     }
 
     public function getNom()
@@ -75,11 +84,11 @@ class Praticien
         return $lesPraticiens;
     }
 
-    public static function ajouterPraticien($Pra_Nom)//$Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
+    public static function ajouterPraticien($Type_Pra, $Pra_Nom, $Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
     {
-        $sql="insert into praticien values('', :Pra_Nom )" ;
+        $sql="insert into praticien values('',:Type_Pra, :Pra_Nom , :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete)" ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':Pra_Nom', $Pra_Nom);
+        $resultat->bindParam(':Type_Pra',$Type_Pra,':Pra_Nom', $Pra_Nom,':Pra_Adresse', $Pra_Adresse,':Pra_CP', $Pra_CP,':Pra_Ville', $Pra_Ville,':Coefnotoriete', $Coefnotoriete);
         $resultat->execute();
         throw new Exception("Problème dans l'ajout de praticien.") ;
     }

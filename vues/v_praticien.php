@@ -32,7 +32,7 @@
             <?php
                 foreach($lesPraticiens as $praticien) //parcours du tableau d'objets récupérés
                 {   
-                    $idPrat=$praticien->getId();           
+                    $idPrat=$praticien->getIdP();           
                     $nom=$praticien ->getNom();
                     $adresse=$praticien->getAdresse();           
                     $CP=$praticien ->getCP();

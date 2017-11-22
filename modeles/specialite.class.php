@@ -13,11 +13,11 @@ class Specialite
         $this->Spe_Code=$value;
     }
 
-    public function getLibelle()
+    public function getLibelleS()
     {
         return $this->Spe_Libelle;
     }
-    public function setLibelle($value)
+    public function setLibelleS($value)
     {
         $this->Spe_Libelle=$value;
     }
