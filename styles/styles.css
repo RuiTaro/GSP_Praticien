@@ -8,9 +8,10 @@ body{
   font-size:0.8em;
 }
 #page {  
-  width : 65%;
-  margin : auto ;
-  border : 0.2em solid black;
+  width : 95%;
+  margin : 25px auto ;
+  background-color: #013967;
+  border-radius: 5px;
   padding : 0.1em;
 }
 #entete{  
@@ -266,7 +267,7 @@ br.clearfix {
 #menu {
   padding: 0 45px 0 45px;
   position: relative;  
-  margin-bottom: 150px;
+  margin: 30px auto;
   height: 60px;  
   border-top: solid 1px ;
   border-bottom: solid 1px;  
@@ -324,19 +325,17 @@ br.clearfix {
 
 /*css de la page de connexion*/
 .login {
-    width:540px;
-    left: 2%;
-    height: 100vh;
-    background-color: #344A85;
-    position: absolute;
+    width:532px;    
+    height: 80vh;
+    background-color: #344A85;    
     z-index: 2;
     color: white;
     font-family: Arial, sans-serif
 }
 .form {
     position: relative;
-    margin-left: 5vw;
-    top:50%;
+    margin-left: 1vw;
+    top:45%;
     transform: translateY(-50%)
 }
 h1 {
@@ -349,9 +348,10 @@ img {
 }
 
 svg {
-    height: 100vh;
-    left: 37%;
-    position: absolute
+    height: 80vh;
+    left: 100%;
+    position: relative;
+    margin-top: -65%;
 }
 
 /*************CHARACTER*************/
@@ -735,9 +735,14 @@ body{
     ul.tabs{
       margin: 0px;
       padding: 0px;
-      list-style: none;
+      list-style: none;      
+    }    
+
+    .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+      background-color: #013967;
+      color: white;
     }
-    ul.tabs li{
+      ul.tabs li{
       background: #033b6b;
       color: #fff;
       display: inline-block;
@@ -764,10 +769,8 @@ body{
   margin: 1em 0;
   width: 100%;
   overflow: hidden;
-  background: #fff;
-  color: #024457;
-  border-radius: 10px;
-  border: 1px solid #167f92;
+  background: #fff;  
+  border-radius: 10px;  
 }
 .responstable tr {
   border: 1px solid #013967;
@@ -829,6 +832,10 @@ body{
     display: table-cell;
     padding: 1em;
   }
+}
+
+.btn-ajout{
+  margin-bottom: 0;
 }
 
 

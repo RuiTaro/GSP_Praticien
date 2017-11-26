@@ -16,7 +16,7 @@ switch($action)
 
 	case 'resultat':
 
-					$idPraticien=$_POST['idPraticien'];
+					$Pra_Num=$_POST['Pra_Num'];
 					$lesPraticiens=Praticien::findByName($_POST['nomPraticien']);
 					if (!empty($lesPraticiens)) 
 		        	{
@@ -26,14 +26,12 @@ switch($action)
 				
 					else 
 					{
-						header("refresh: 0;url=index.php?uc=Praticiens&action=recherchePrat");
+						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=recherchePrat");
 					}
-					break;;		
+					break;		
 					
 					 
-	case 'modifier' : // on appelle la même vue dans le cas d'un ajout ou d'une modification
-					// la distinction se fera sur le paramètre de l'id de l'artiste (si c'est un ajout il n'y
-					// a pas d'id puisqu'il est auto incrémenté et qu'il n'est donc pas connu avant l'ajout !
+	case 'modifier' : 
 					include("vues/v_formPraticien.php");
 					break;
 					
@@ -42,22 +40,29 @@ switch($action)
 					break;
 					
 	case 'VerifForm' :	
-					if(!empty($_POST['idPraticien'])) // s'il s'agit d'une modification
+					if(!empty($_POST['Pra_Num'])) // s'il s'agit d'une modification
 					{
-						// a compléter Artist::modifierArtiste($_POST['idArtiste'],$_POST['nomArtiste']);
-						header("refresh: 0;url=index.php?uc=Praticien&action=all");
+						$modif= Praticien::modifierPraticien($_POST['Pra_Num'],$_POST['nomPrat']);
+						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					}
 					else // s'il s'agit d'un ajout
 					{
-						$ajout= Praticien::ajouterPraticien($_POST['nomPraticien']);
-						header("refresh: 0;url=index.php?uc=Praticien&action=all");
+						$ajout= Praticien::ajouterPraticien($_POST['CodePrat'],$_POST['nomPrat'],$_POST['AdressePrat'],$_POST['CPPrat'],$_POST['VillePrat'],$_POST['CoefnotorietePrat']);
+						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					}
 					break;
 					
 	case 'supprimer' :
-					$sup= Praticien::supprimerPraticien($_REQUEST['numprat']);
-					header("refresh: 0;url=index.php?uc=Praticien&action=all");
+					$sup= Praticien::supprimerPraticien($_REQUEST['Pra_Num']);
+					header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					break;
+
+	case 'Spécialité' : 
+					include("controleurs/c_Specialites.php");
+					break;
+
+
+
 	default: echo "rien";
 } 
 ?>

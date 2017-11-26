@@ -1,70 +1,79 @@
 <?php
 class Praticien 
 {
-    private $id;
-    private $nom;
-    private $adresse;
-    private $cp;
-    private $ville;
-    private $coef;
+    private $Pra_Num;
+    private $Type_Pra;
+    private $Pra_Nom;
+    private $Pra_Adresse;
+    private $Pra_CP;
+    private $Pra_Ville;
+    private $Coefnotoriete;
 
-   public function getId()
+   public function getIdP()
     {
-        return $this->id;
+        return $this->Pra_Num;
     }
-    public function setId($value)
+    public function setIdP($value)
     {
-        $this->id=$value;
+        $this->Pra_Num=$value;
+    }
+     public function getTypeP()
+    {
+        return $this->Type_Pra;
+    }
+    public function setTypeP($value)
+    {
+        $this->Type_Pra=$value;
     }
 
     public function getNom()
     {
-        return $this->nom;
+        return $this->Pra_Nom;
     }
     public function setNom($value)
     {
-        $this->nom=$value;
+        $this->Pra_Nom=$value;
     }
 
     public function getAdresse()
     {
-        return $this->adresse;
+        return $this->Pra_Adresse;
     }
     public function setAdresse($value)
     {
-        $this->adresse=$value;
+        $this->Pra_Adresse=$value;
     }
 
     public function getCP()
     {
-        return $this->cp;
+        return $this->Pra_CP;
     }
     public function setCP($value)
     {
-        $this->cp=$value;
+        $this->Pra_CP=$value;
     }
 
     public function getVille()
     {
-        return $this->ville;
+        return $this->Pra_Ville;
     }
     public function setVille($value)
     {
-        $this->ville=$value;
+        $this->Pra_Ville=$value;
     }
 
     public function getCoef()
     {
-        return $this->coef;
+        return $this->Coefnotoriete;
     }
     public function setCoef($value)
     {
-        $this->coef=$value;
+        $this->Coefnotoriete=$value;
     }
 
     public function __toString()
     {
-        return "id : ". $this->id. " - nom : ".$this->nom;
+        return "Id : ". $this->Pra_Num. " - Nom : ".$this->Pra_Nom;
     }
 
     public static function getAll()
@@ -75,27 +84,27 @@ class Praticien
         return $lesPraticiens;
     }
 
-    public static function ajouterPraticien($nom,$adresse,$cp,$ville,$coef)
+    public static function ajouterPraticien($Type_Pra, $Pra_Nom, $Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
     {
-        $sql="insert into praticien values(null, :nom , :adresse, :cp, :ville, :coef)" ;
+        $sql="insert into praticien values('',:Type_Pra, :Pra_Nom , :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete)" ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':nom', $nom,':adresse', $adresse,':cp', $cp,':ville', $ville,':coef', $coef);
+        $resultat->bindParam(':Type_Pra',$Type_Pra,':Pra_Nom', $Pra_Nom,':Pra_Adresse', $Pra_Adresse,':Pra_CP', $Pra_CP,':Pra_Ville', $Pra_Ville,':Coefnotoriete', $Coefnotoriete);
         $resultat->execute();
         throw new Exception("Problème dans l'ajout de praticien.") ;
     }
-    public static function supprimerPraticien($id)
+    public static function supprimerPraticien($Pra_Num)
     {
         $sql="delete from praticien where Pra_Num= :id " ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':id', $id);
+        $resultat->bindParam(':id', $Pra_Num);
         $resultat->execute();
         throw new Exception("Problème dans la suppression de praticien.") ;
     }
-    public static function findById($id)
+    public static function findById($Pra_Num)
     {
         $sql="select * from praticien where Pra_Num= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($id)); // applique le paramètre
+        $resultat->execute(array($Pra_Num)); // applique le paramètre
         $lePraticien=$resultat->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE,"Praticien"); // lit la ligne et renvoie un objet Praticien
         return $lePraticien[0];
    
@@ -112,11 +121,11 @@ class Praticien
     }
 
     // modifie un objet Praticien
-    public static function modifierPraticien($id,$nom)
+    public static function modifierPraticien($Pra_Num,$Pra_Nom)
     {
-        $sql="update praticien set Pra_Nom= ? where id= ?" ;
+        $sql="update praticien set Pra_Nom= ? where Pra_Num= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($nom,$id)); // applique le paramètre
+        $resultat->execute(array($Pra_Nom,$Pra_Num)); // applique le paramètre
         throw new Exception("Problème dans la modification de praticien.") ;
     }
     /**s
