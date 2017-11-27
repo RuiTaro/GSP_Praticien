@@ -42,7 +42,7 @@ switch($action)
 	case 'VerifForm' :	
 					if(!empty($_POST['Pra_Num'])) // s'il s'agit d'une modification
 					{
-						Praticien::modifierPraticien($_POST['Pra_Num'],$_POST['nomPrat']);
+						Praticien::modifierPraticien($_POST['Pra_Num'],$_POST['nomPrat'],$_POST['AdressePrat'],$_POST['CPPrat'],$_POST['VillePrat'],$_POST['CoefnotorietePrat']);
 						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					}
 					else // s'il s'agit d'un ajout
@@ -53,8 +53,9 @@ switch($action)
 					break;
 					
 	case 'supprimer' :
-					Praticien::supprimerPraticien($_REQUEST['Pra_Num']);
-					header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
+					$sup=Praticien::supprimerPraticien($_REQUEST['supp_P']);
+					var_dump($sup);
+					//header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					break;
 
 	case 'Spécialité' : 

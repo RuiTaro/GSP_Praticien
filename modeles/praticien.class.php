@@ -121,11 +121,11 @@ class Praticien
     }
 
     // modifie un objet Praticien 
-    public static function modifierPraticien($Pra_Num,$Pra_Nom)
+    public static function modifierPraticien($Pra_Num,$Pra_Nom,$Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
     {
-        $sql="update praticien set Pra_Nom= ? where Pra_Num= ?" ;
+        $sql="update praticien set Pra_Nom= ?,Pra_Adresse= ?,Pra_CP= ?,Pra_Ville= ?,Coefnotoriete= ?  where Pra_Num= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($Pra_Nom,$Pra_Num)); // applique le paramètre
+        $resultat->execute(array($Pra_Nom,$Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete,$Pra_Num)); // applique le paramètre
         throw new Exception("Problème dans la modification de praticien.") ;
     }
     /**s
