@@ -34,9 +34,8 @@ body{
 #contenu{
 	border: none;
 	padding: 1.3em;	
-	border-left :  groove 0.8em #980101;
   margin-top : 1.2em;
-	margin-left: 18%;
+	margin-left: 10%;
 /* permet de fixer une hauteur mini sur les navigateurs modernes */
   min-height:27em;
 /* pour obtenir le même effet sur IE, sachant que si le contenu dépasse, il
