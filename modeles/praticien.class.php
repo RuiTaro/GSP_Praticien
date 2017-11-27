@@ -98,7 +98,7 @@ class Praticien
         $resultat=MonPdo::getInstance()->prepare($sql);
         $resultat->bindParam(':Pra_Num', $Pra_Num);
         $resultat->execute();
-        throw new Exception("Problème dans la suppression de praticien.") ;
+        //throw new Exception("Problème dans la suppression de praticien.") ;
     }
     public static function findById($Pra_Num)
     {

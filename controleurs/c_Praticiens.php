@@ -53,9 +53,13 @@ switch($action)
 					break;
 					
 	case 'supprimer' :
-					$sup=Praticien::supprimerPraticien($_REQUEST['supp_P']);
-					var_dump($sup);
-					//header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
+					$lesPraticiens=$_POST['supp_P'];
+					foreach($lesPraticiens as $praticien) 
+					{
+						Praticien::supprimerPraticien($praticien);
+					}
+					
+					header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					break;
 
 	case 'Spécialité' : 
