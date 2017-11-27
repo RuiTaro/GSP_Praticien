@@ -42,12 +42,12 @@ switch($action)
 	case 'VerifForm' :	
 					if(!empty($_POST['Pra_Num'])) // s'il s'agit d'une modification
 					{
-						$modif= Praticien::modifierPraticien($_POST['Pra_Num'],$_POST['nomPrat']);
+						Praticien::modifierPraticien($_POST['Pra_Num'],$_POST['nomPrat']);
 						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					}
 					else // s'il s'agit d'un ajout
 					{
-						$ajout= Praticien::ajouterPraticien($_POST['CodePrat'],$_POST['nomPrat'],$_POST['AdressePrat'],$_POST['CPPrat'],$_POST['VillePrat'],$_POST['CoefnotorietePrat']);
+						Praticien::ajouterPraticien($_POST['CodePrat'],$_POST['nomPrat'],$_POST['AdressePrat'],$_POST['CPPrat'],$_POST['VillePrat'],$_POST['CoefnotorietePrat']);
 						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					}
 					break;
@@ -63,6 +63,6 @@ switch($action)
 
 
 
-	default: echo "rien";
+	default: echo "rien"; 
 } 
 ?>

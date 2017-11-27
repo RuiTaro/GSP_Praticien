@@ -15,7 +15,7 @@
 		    <th>Options</th>
 	  	</tr>
 	  	<script>
-			function supprPraticien(Pra_Num) 
+			function supprPraticien(Pra_Num)  
 			{
 				if(confirm("Voulez vous vraimer supprimer ce praticien?"))
 				{
@@ -52,6 +52,7 @@
             <?php 
                 } 
             ?>
+
 
   		  
 	</table>	
