@@ -94,9 +94,9 @@ class Praticien
     }
     public static function supprimerPraticien($Pra_Num)
     {
-        $sql="delete from praticien where Pra_Num= :id " ;
+        $sql="delete from praticien where Pra_Num= :Pra_Num " ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':id', $Pra_Num);
+        $resultat->bindParam(':Pra_Num', $Pra_Num);
         $resultat->execute();
         throw new Exception("Problème dans la suppression de praticien.") ;
     }
@@ -120,7 +120,7 @@ class Praticien
      
     }
 
-    // modifie un objet Praticien
+    // modifie un objet Praticien 
     public static function modifierPraticien($Pra_Num,$Pra_Nom)
     {
         $sql="update praticien set Pra_Nom= ? where Pra_Num= ?" ;

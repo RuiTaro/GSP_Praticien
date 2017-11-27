@@ -39,7 +39,7 @@
                 
             ?>
                     <tr> 
-                    <td><input type="checkbox"/></td>
+                    <td><a href="index.php?uc=GestionPraticiens&action=supprimer"><input type="checkbox"/></a></td>
 				    <td><?php echo $idPrat; ?></td>
 				    <td><?php echo $nom; ?></td>
 				    <td><?php echo $adresse; ?></td>

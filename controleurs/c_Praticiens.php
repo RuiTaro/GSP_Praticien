@@ -53,7 +53,7 @@ switch($action)
 					break;
 					
 	case 'supprimer' :
-					$sup= Praticien::supprimerPraticien($_REQUEST['Pra_Num']);
+					Praticien::supprimerPraticien($_REQUEST['Pra_Num']);
 					header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					break;
 
