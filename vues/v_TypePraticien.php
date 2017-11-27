@@ -15,8 +15,8 @@
 	  	<?php
     		foreach($lesTypePraticiens as $TypePraticien) //parcours du tableau d'objets récupérés
     		{   
-		        $IdTypePrat=$TypePraticien->getId();           
-		        $Libelle=$TypePraticien ->getLibelle(); 
+		        $IdTypePrat=$TypePraticien->getIdTP();           
+		        $Libelle=$TypePraticien ->getLibelleTP(); 
        
     
 ?>
