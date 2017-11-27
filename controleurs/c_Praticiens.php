@@ -47,7 +47,7 @@ switch($action)
 					}
 					else // s'il s'agit d'un ajout
 					{
-						Praticien::ajouterPraticien($_POST['CodePrat'],$_POST['nomPrat'],$_POST['AdressePrat'],$_POST['CPPrat'],$_POST['VillePrat'],$_POST['CoefnotorietePrat']);
+						Praticien::ajouterPraticien($_POST['nomPrat'],$_POST['AdressePrat'],$_POST['CPPrat'],$_POST['VillePrat'],$_POST['CoefnotorietePrat']);
 						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					}
 					break;

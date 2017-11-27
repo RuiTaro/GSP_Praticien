@@ -5,7 +5,7 @@ class Praticien
     private $Type_Pra;
     private $Pra_Nom;
     private $Pra_Adresse;
-    private $Pra_CP;
+    private $Pra_CP; 
     private $Pra_Ville;
     private $Coefnotoriete;
 

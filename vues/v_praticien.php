@@ -1,9 +1,10 @@
 <div id="tabs-1" class="tab-content current">
 	<table class="responstable">
+<form action ="index.php?uc=GestionPraticiens&action=supprimer" method="POST">
 		<div class="btn-ajout">
 		<a href="index.php?uc=GestionPraticiens&action=supprimer"><img src="images/sup.jpg" width="100" height="35" style="height: 35px;border: 1px solid;border-radius: 10px; margin-bottom: 10px"/></a>
 		<a href="index.php?uc=GestionPraticiens&action=ajouter"><img src="images/ajouter.jpg" width="100" height="35" style="height: 35px;border: 1px solid;border-radius: 10px; margin-bottom: 10px"/></a>
-		</div>				  
+		</div>		  
 	  	<tr>
 		   	<th>Sélection</th>
 		    <th data-th="Driver details"><span>Numéro</span></th>
@@ -39,7 +40,7 @@
                 
             ?>
                     <tr> 
-                    <td><a href="index.php?uc=GestionPraticiens&action=supprimer"><input type="checkbox"/></a></td>
+                    <td><input type="checkbox" name="supp_P[]"/></td>
 				    <td><?php echo $idPrat; ?></td>
 				    <td><?php echo $nom; ?></td>
 				    <td><?php echo $adresse; ?></td>
@@ -51,9 +52,11 @@
 
             <?php 
                 } 
+
+                var_dump($POST);
             ?>
 
 
-  		  
+            </form>
 	</table>	
 </div>			  
