@@ -11,9 +11,7 @@
 		    <th>Adresse</th>
 		    <th>Code postale</th> 
 		    <th>Ville</th>
-		    <th>Coefficient</th>
-		    <th>Type</th>
-		    <th>Spécialité</th>
+		    <th>Coefficient</th>		    
 		    <th>Options</th>
 	  	</tr>
 	  	<script>
