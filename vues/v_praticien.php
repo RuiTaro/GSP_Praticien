@@ -2,7 +2,7 @@
 	<table class="responstable">
 <form action ="index.php?uc=GestionPraticiens&action=supprimer" method="POST">
 		<div class="btn-ajout">
-		<input type="submit" value="Supprimer"/><img src="images/sup.jpg" width="100" height="35" style="height: 35px;border: 1px solid;border-radius: 10px; margin-bottom: 10px"/>
+		<i class="fa fa-trash-o" aria-hidden="true"><input type="submit" value="Supprimer"/></i>
 		<a href="index.php?uc=GestionPraticiens&action=ajouter"><img src="images/ajouter.jpg" width="100" height="35" style="height: 35px;border: 1px solid;border-radius: 10px; margin-bottom: 10px"/></a>
 		</div>		  
 	  	<tr>
