@@ -84,13 +84,21 @@ class Praticien
         return $lesPraticiens;
     }
 
-    public static function ajouterPraticien($Typ_Code, $Pra_Nom, $Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
+    public static function ajouterPraticien($Typ_Code, $Pra_Nom, $Pra_Adresse, $Pra_CP, $Pra_Ville, $Coefnotoriete)
     {
-        $sql="insert into praticien values('',:Typ_Code, :Pra_Nom , :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete)" ;
+        $sql="insert into praticien values(null,:Typ_Code, :Pra_Nom, :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete)" ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':Typ_Code, :Pra_Nom , :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete',
-            $Typ_Code, $Pra_Nom, $Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete);
+        
+        $resultat->bindParam(':Typ_Code', $Typ_Code, PDO::PARAM_INT);
+        $resultat->bindParam(':Pra_Nom', $Pra_Nom, PDO::PARAM_STR);
+        $resultat->bindParam(':Pra_Adresse', $Pra_Adresse, PDO::PARAM_STR);
+        $resultat->bindParam(':Pra_CP', $Pra_CP, PDO::PARAM_INT);
+        $resultat->bindParam(':Pra_Ville', $Pra_Ville, PDO::PARAM_STR);
+
+        $resultat->bindParam(':Coefnotoriete', $Coefnotoriete, PDO::PARAM_INT);
+
         $resultat->execute();
+
     }
     public static function supprimerPraticien($Pra_Num)
     {
