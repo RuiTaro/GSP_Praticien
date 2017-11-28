@@ -2,7 +2,7 @@
 class Praticien 
 {
     private $Pra_Num;
-    private $Type_Pra;
+    private $Typ_Code;
     private $Pra_Nom;
     private $Pra_Adresse;
     private $Pra_CP; 
@@ -19,11 +19,11 @@ class Praticien
     }
      public function getTypeP()
     {
-        return $this->Type_Pra;
+        return $this->Typ_Code;
     }
     public function setTypeP($value)
     {
-        $this->Type_Pra=$value;
+        $this->Typ_Code=$value;
     }
 
     public function getNom()
@@ -84,11 +84,11 @@ class Praticien
         return $lesPraticiens;
     }
 
-    public static function ajouterPraticien($Type_Pra, $Pra_Nom, $Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
+    public static function ajouterPraticien($Typ_Code, $Pra_Nom, $Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete)
     {
-        $sql="insert into praticien values('',:Type_Pra, :Pra_Nom , :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete)" ;
+        $sql="insert into praticien values('',:Typ_Code, :Pra_Nom , :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete)" ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':Type_Pra',$Type_Pra,':Pra_Nom', $Pra_Nom,':Pra_Adresse', $Pra_Adresse,':Pra_CP', $Pra_CP,':Pra_Ville', $Pra_Ville,':Coefnotoriete', $Coefnotoriete);
+        $resultat->bindParam(':Typ_Code',$Typ_Code,':Pra_Nom', $Pra_Nom,':Pra_Adresse', $Pra_Adresse,':Pra_CP', $Pra_CP,':Pra_Ville', $Pra_Ville,':Coefnotoriete', $Coefnotoriete);
         $resultat->execute();
         throw new Exception("Problème dans l'ajout de praticien.") ;
     }
