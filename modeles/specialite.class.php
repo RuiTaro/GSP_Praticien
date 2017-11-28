@@ -8,16 +8,16 @@ class Specialite
     {
         return $this->Spe_Code;
     }
-    public function setSpe_Code($value)
+    public function setSpe_Code($value) 
     {
         $this->Spe_Code=$value;
     }
 
-    public function getLibelle()
+    public function getLibelleS()
     {
         return $this->Spe_Libelle;
     }
-    public function setLibelle($value)
+    public function setLibelleS($value)
     {
         $this->Spe_Libelle=$value;
     }
@@ -27,7 +27,7 @@ class Specialite
         return "Id : ". $this->Spe_Code. " - Libellé : ".$this->Spe_Libelle;
     }
 
-    public static function getAll()
+    public static function getAllS()
     {
         $sql="select * from specialite " ;
         $resultat=MonPdo::getInstance()->query($sql);
@@ -41,7 +41,7 @@ class Specialite
         $resultat=MonPdo::getInstance()->prepare($sql);
         $resultat->bindParam(':Spe_Libelle', $Spe_Libelle);
         $resultat->execute();
-        throw new Exception("Problème dans l'ajout de specialite.") ;
+        
     }
     public static function supprimerSpecialite($Spe_Code)
     {
@@ -49,9 +49,9 @@ class Specialite
         $resultat=MonPdo::getInstance()->prepare($sql);
         $resultat->bindParam(':Spe_Code', $Spe_Code);
         $resultat->execute();
-        throw new Exception("Problème dans la suppression de specialite.") ;
+        
     }
-    public static function findById($Spe_Code)
+    public static function findByIdS($Spe_Code)
     {
         $sql="select * from specialite where Spe_Code= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
@@ -61,7 +61,7 @@ class Specialite
    
     }
 
-    public static function findByName($Spe_Libelle)
+    public static function findByNameS($Spe_Libelle)
     { 
         $sql="select * from specialite where Spe_Libelle= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
@@ -77,6 +77,6 @@ class Specialite
         $sql="update specialite set Spe_Libelle= ? where Spe_Code= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
         $resultat->execute(array($Spe_Libelle,$Spe_Code)); // applique le paramètre
-        throw new Exception("Problème dans la modification de specialite.") ;
+       
     } 
 }
