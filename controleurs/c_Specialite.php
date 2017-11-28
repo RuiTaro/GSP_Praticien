@@ -58,7 +58,7 @@ switch($action)
 						Specialite::supprimerSpecialite($specialite);
 					}
 					
-					header("refresh: 0;url=index.php?uc=GestionPraticiens&action=allS");
+					header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					break;
 
 
