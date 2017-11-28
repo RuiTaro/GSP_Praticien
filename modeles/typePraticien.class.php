@@ -40,8 +40,7 @@ class TypePraticien
         $sql="insert into type_praticien values(null, :Typ_Libelle)";
         $resultat=MonPdo::getInstance()->prepare($sql);
         $resultat->bindParam(':Typ_Libelle', $Typ_Libelle);
-        $resultat->execute();
-        throw new Exception("Problème dans l'ajout de type de praticiens.") ;
+        $resultat->execute();        
     }
     public static function supprimerTypePraticiens($Typ_Code)
     {
@@ -49,7 +48,6 @@ class TypePraticien
         $resultat=MonPdo::getInstance()->prepare($sql);
         $resultat->bindParam(':Typ_Code', $Typ_Code);
         $resultat->execute();
-        throw new Exception("Problème dans la suppression de type de praticiens.") ;
     }
     public static function findById($Typ_Code)
     {
@@ -76,7 +74,6 @@ class TypePraticien
     {
         $sql="update type_praticien set Typ_Libelle= ? where Typ_Code= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($Typ_Libelle,$Typ_Code)); // applique le paramètre
-        throw new Exception("Problème dans la modification de type de praticiens.") ;
+        $resultat->execute(array($Typ_Libelle,$Typ_Code)); // applique le paramètre        
     }
 }

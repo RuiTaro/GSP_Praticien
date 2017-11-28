@@ -29,6 +29,35 @@ switch($action)
 						header("refresh: 0;url=index.php?uc=specialite&action=rechercheSpecialite");
 					}
 					break;
+	case 'modifierTP' : 
+					include("vues/v_formTypePraticien.php");
+					break;
+					
+	case 'ajouterTP' :
+					include("vues/v_formTypePraticien.php");
+					break;
+
+	case 'VerifFormTP' :	
+					if(!empty($_POST['Typ_Code'])) // s'il s'agit d'une modification
+					{
+						TypePraticien::modifierTypePraticiens($_POST['Typ_Code'],$_POST['Typ_Libelle']);
+						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
+					}
+					else // s'il s'agit d'un ajout
+					{
+						TypePraticien::ajouterTypePraticiens($_POST['Typ_Libelle']);
+						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
+					}
+					break;
+	case 'supprimerTP':
+		$lesTypePraticiens=$_POST['supp_TP'];
+		foreach($lesTypePraticiens as $TPraticien) 
+		{
+			TypePraticien::supprimerTypePraticiens($TPraticien);
+		}
+		
+		header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all"); //a modifier pour mieux voir directement le résultat
+		break;
 	
 	default:echo "rien";
 	}
