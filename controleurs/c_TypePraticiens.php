@@ -53,7 +53,7 @@ switch($action)
 		$lesTypePraticiens=$_POST['supp_TP'];
 		foreach($lesTypePraticiens as $TPraticien) 
 		{
-			Praticien::supprimerPraticien($TPraticien);
+			TypePraticien::supprimerTypePraticiens($TPraticien);
 		}
 		
 		header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all"); //a modifier pour mieux voir directement le résultat
