@@ -29,15 +29,15 @@ switch($action)
 						header("refresh: 0;url=index.php?uc=specialite&action=rechercheSpecialite");
 					}
 					break;
-	case 'modifier' : 
+	case 'modifierTP' : 
 					include("vues/v_formTypePraticien.php");
 					break;
 					
-	case 'ajouter' :
+	case 'ajouterTP' :
 					include("vues/v_formTypePraticien.php");
 					break;
 
-	case 'VerifForm' :	
+	case 'VerifFormTP' :	
 					if(!empty($_POST['Typ_Code'])) // s'il s'agit d'une modification
 					{
 						TypePraticien::modifierTypePraticiens($_POST['Typ_Code'],$_POST['Typ_Libelle']);

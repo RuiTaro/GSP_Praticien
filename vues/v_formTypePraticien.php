@@ -12,7 +12,7 @@
 		?>
 			<h2>Fiche Praticien</h2> 
 			<section>
-				<form action="index.php?uc=GestionPraticiens&action=VerifForm" method="POST">
+				<form action="index.php?uc=GestionPraticiens&action=VerifFormTP" method="POST">
 
 				<input type="hidden" name="Typ_Code" value='<?php if(!empty($_REQUEST['Typ_Code'])){echo $lesTypePraticiens->getIdP();}?>'> 
 
