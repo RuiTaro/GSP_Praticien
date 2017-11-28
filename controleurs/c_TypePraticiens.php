@@ -3,7 +3,7 @@ $action = $_REQUEST['action']; //récupération de l'action
 //echo "action:".$action;
 switch($action)
 { 
-	case 'allTP': //pour afficher tous les types
+	case 'all': //pour afficher tous les types
 		{
 			$lesTypePraticiens=TypePraticien::getAllTP(); //on fait appel  à la méthode d'accès aux données de la classe TypePraticien
 			include("vues/v_TypePraticien.php");//puis on affiche la vue qui utilise les données
@@ -41,12 +41,12 @@ switch($action)
 					if(!empty($_POST['Typ_Code'])) // s'il s'agit d'une modification
 					{
 						TypePraticien::modifierTypePraticiens($_POST['Typ_Code'],$_POST['Typ_Libelle']);
-						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=allTP");
+						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					}
 					else // s'il s'agit d'un ajout
 					{
 						TypePraticien::ajouterTypePraticiens($_POST['Typ_Libelle']);
-						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=allTP");
+						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					}
 					break;
 	case 'supprimerTP':
@@ -56,7 +56,7 @@ switch($action)
 			TypePraticien::supprimerTypePraticiens($TPraticien);
 		}
 		
-		header("refresh: 0;url=index.php?uc=GestionPraticiens&action=allTP"); //a modifier pour mieux voir directement le résultat
+		header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all"); //a modifier pour mieux voir directement le résultat
 		break;
 	
 	default:echo "rien";
