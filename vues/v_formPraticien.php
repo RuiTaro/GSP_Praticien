@@ -8,7 +8,7 @@
 			$LePraticien=Praticien::findById($_REQUEST['Pra_Num']); // trouve le Praticien et on renvoie un objet Praticien
 		}
 		 
-		$lesTypePraticiens=TypePraticien::getAll($_REQUEST['Typ_Code']);
+		$lesTypePraticiens=TypePraticien::getAllTP();
 		?>
 			<h2>Fiche Praticien</h2> 
 			<section>

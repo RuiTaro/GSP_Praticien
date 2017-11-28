@@ -5,7 +5,7 @@ switch($action)
 { 
 	case 'all': //pour afficher tous les specialites
 		{
-			$lesTypePraticiens=TypePraticien::getAll(); //on fait appel  à la méthode d'accès aux données de la classe TypePraticien
+			$lesTypePraticiens=TypePraticien::getAllTP(); //on fait appel  à la méthode d'accès aux données de la classe TypePraticien
 			include("vues/v_TypePraticien.php");//puis on affiche la vue qui utilise les données
 			break;
 		}

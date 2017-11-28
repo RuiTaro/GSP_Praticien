@@ -27,7 +27,7 @@ class TypePraticien
         return "Id : ". $this->Typ_Code. " - Libellé : ".$this->Typ_Libelle;
     }
 
-    public static function getAll()
+    public static function getAllTP()
     {
         $sql="select * from type_praticien " ;
         $resultat=MonPdo::getInstance()->query($sql);
