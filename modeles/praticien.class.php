@@ -88,7 +88,7 @@ class Praticien
     {
         $sql="insert into praticien values('',:Typ_Code, :Pra_Nom , :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete)" ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':Typ_Code,:Pra_Nom,:Pra_Adresse,:Pra_CP,:Pra_Ville,:Coefnotoriete',
+        $resultat->bindParam(':Typ_Code, :Pra_Nom , :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete',
             $Typ_Code, $Pra_Nom, $Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete);
         $resultat->execute();
     }
