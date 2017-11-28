@@ -74,7 +74,6 @@ class TypePraticien
     {
         $sql="update type_praticien set Typ_Libelle= ? where Typ_Code= ?" ;
         $resultat=MonPdo::getInstance()->prepare($sql); // prépare la requête
-        $resultat->execute(array($Typ_Libelle,$Typ_Code)); // applique le paramètre
-        throw new Exception("Problème dans la modification de type de praticiens.") ;
+        $resultat->execute(array($Typ_Libelle,$Typ_Code)); // applique le paramètre        
     }
 }
