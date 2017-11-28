@@ -17,7 +17,7 @@
 				<input type="hidden" name="Pra_Num" value='<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getIdP();}?>'> 
 
 				<label for="nomPrat"><font color="#A52A2A">Nom</font></label> 
-				<input type="text" name="nomPrat" id="nomPraticien" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getNom();} ?>"><br><br>
+				<input type="text" name="nomPrat" id="nomPrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getNom();} ?>"><br><br>
 
 				<label for="TypePrat"><font color="#A52A2A">Type du praticien</font></label> 
 				<select name="TypePrat" id="TypePrat" value="<?php if(!empty($_REQUEST['Pra_Num'])){echo $LePraticien->getTypeP();} ?>">

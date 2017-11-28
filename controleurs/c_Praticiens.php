@@ -38,7 +38,7 @@ switch($action)
 	case 'ajouter' :
 					include("vues/v_formPraticien.php");
 					break;
-					
+					 
 	case 'VerifForm' :	
 					if(!empty($_POST['Pra_Num'])) // s'il s'agit d'une modification
 					{
@@ -47,7 +47,7 @@ switch($action)
 					}
 					else // s'il s'agit d'un ajout
 					{
-						Praticien::ajouterPraticien($_POST['nomPrat'],$_POST['AdressePrat'],$_POST['CPPrat'],$_POST['VillePrat'],$_POST['CoefnotorietePrat']);
+						Praticien::ajouterPraticien($_POST['TypePrat'],$_POST['nomPrat'],$_POST['AdressePrat'],$_POST['CPPrat'],$_POST['VillePrat'],$_POST['CoefnotorietePrat']);
 						header("refresh: 0;url=index.php?uc=GestionPraticiens&action=all");
 					}
 					break;
