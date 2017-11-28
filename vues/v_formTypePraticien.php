@@ -14,10 +14,10 @@
 			<section>
 				<form action="index.php?uc=GestionPraticiens&action=VerifFormTP" method="POST">
 
-				<input type="hidden" name="Typ_Code" value='<?php if(!empty($_REQUEST['Typ_Code'])){echo $lesTypePraticiens->getIdP();}?>'> 
+				<input type="hidden" name="Typ_Code" value='<?php if(!empty($_REQUEST['Typ_Code'])){echo $lesTypePraticiens->getIdTP();}?>'> 
 
 				<label for="Typ_Libelle"><font color="#A52A2A">Libelle</font></label> 
-				<input type="text" name="Typ_Libelle" id="Typ_Libelle" value="<?php if(!empty($_REQUEST['Typ_Code'])){echo $lesTypePraticiens->getNom();} ?>"><br><br>
+				<input type="text" name="Typ_Libelle" id="Typ_Libelle" value="<?php if(!empty($_REQUEST['Typ_Code'])){echo $lesTypePraticiens->getLibelleTP();} ?>"><br><br>
 
 				<input type="submit" value="<?php if(!empty($_REQUEST['Typ_Code'])){echo "Modifier le type";}else{echo "Ajouter le type";} ?>"/>
 				</form>
