@@ -30,11 +30,11 @@ switch($action)
 					}
 					break;
 	case 'modifier' : 
-					include("vues/v_formTPraticien.php");
+					include("vues/v_formTypePraticien.php");
 					break;
 					
 	case 'ajouter' :
-					include("vues/v_formTPraticien.php");
+					include("vues/v_formTypePraticien.php");
 					break;
 
 	case 'VerifForm' :	
