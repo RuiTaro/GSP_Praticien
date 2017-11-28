@@ -65,3 +65,11 @@ Insert into praticien(Typ_Code, Pra_Nom, Pra_Adresse, Pra_CP, Pra_Ville, Coefnot
 	
 #Insert into praticien(Typ_Code, Pra_Nom, Pra_Adresse, Pra_CP, Pra_Ville, Coefnotoriete) 
 	#values((Select Typ_Code from type_praticien where Typ_Libelle = ""), "", "", , "", );
+	
+
+
+#Posseder (diplome)
+
+#Insert into posseder values((Select Pra_Num from praticien where Pra_Nom = ""),(Select Spe_Code from specialite where Spe_Libelle = ""), "", );
+
+Insert into posseder values((Select Pra_Num from praticien where Pra_Nom = "Gongora"),(Select Spe_Code from specialite where Spe_Libelle = "Cardiologie"), "Diplôme de la Cardiologie des coeurs", 20);
