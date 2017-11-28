@@ -88,9 +88,9 @@ class Praticien
     {
         $sql="insert into praticien values('',:Typ_Code, :Pra_Nom , :Pra_Adresse, :Pra_CP, :Pra_Ville, :Coefnotoriete)" ;
         $resultat=MonPdo::getInstance()->prepare($sql);
-        $resultat->bindParam(':Typ_Code',$Typ_Code,':Pra_Nom', $Pra_Nom,':Pra_Adresse', $Pra_Adresse,':Pra_CP', $Pra_CP,':Pra_Ville', $Pra_Ville,':Coefnotoriete', $Coefnotoriete);
+        $resultat->bindParam(':Typ_Code,:Pra_Nom,:Pra_Adresse,:Pra_CP,:Pra_Ville,:Coefnotoriete',
+            $Typ_Code, $Pra_Nom, $Pra_Adresse,$Pra_CP,$Pra_Ville,$Coefnotoriete);
         $resultat->execute();
-        throw new Exception("Problème dans l'ajout de praticien.") ;
     }
     public static function supprimerPraticien($Pra_Num)
     {
