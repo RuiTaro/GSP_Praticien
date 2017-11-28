@@ -48,7 +48,7 @@
 				    <td><?php echo $CP; ?></td>
 				    <td><?php echo $ville; ?></td>
 				    <td><?php echo $coef; ?></td>		            
-                    <td><a href="index.php?uc=GestionPraticiens&action=all"><img src="images/btn_modifier_inactif.gif" style="height: 35px; border: 1px solid; border-radius: 10px; margin: 10px; width: 40px;"/></a></td>
+                    <td><a href='index.php?uc=GestionPraticiens&action=modifier&Pra_Num=<?php echo $idPrat;?>'><img src="images/btn_modifier_inactif.gif" style="height: 35px; border: 1px solid; border-radius: 10px; margin: 10px; width: 40px;"/></a></td>
                     </tr>
 
             <?php 
